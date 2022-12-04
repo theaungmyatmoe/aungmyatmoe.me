@@ -38,7 +38,7 @@ const modeScript = `
 export default function Head() {
     return (
         <>
-            <title>Aung Myat Moe's Portfolio</title>
+            <title>Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast</title>
             <meta content="width=device-width, initial-scale=1" name="viewport"/>
             <link rel="icon" href="/favicon.ico"/>
             <Script
