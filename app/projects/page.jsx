@@ -11,39 +11,25 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
     {
-        name: 'Planetaria',
+        name: 'Wuttyi Lang',
         description:
-            'Creating technology to empower civilians to explore space on their own terms.',
-        link: {href: 'http://planetaria.tech', label: 'planetaria.tech'},
-        logo: logoPlanetaria,
+            'LISP like Functional and OO paradigms supported programming language',
+        link: {href: 'https://wuttyi.vercel.app/', label: 'https://wuttyi.vercel.app/'},
+        logo: 'https://wuttyi.vercel.app/logo.svg',
     },
     {
-        name: 'Animaginary',
+        name: 'Yours.Nvim',
         description:
-            'High performance web animation library, hand-written in optimized WASM.',
-        link: {href: '#', label: 'github.com'},
-        logo: logoAnimaginary,
-    },
-    {
-        name: 'HelioStream',
-        description:
-            'Real-time video streaming library, optimized for interstellar transmission.',
-        link: {href: '#', label: 'github.com'},
+            'The next level level minimalist IDE layer for nvim which was inspired by the new UI of Jetbrains IDE',
+        link: {href: 'https://github.com/amm834/yours.nvim', label: 'https://github.com/amm834/yours.nvim'},
         logo: logoHelioStream,
     },
     {
-        name: 'cosmOS',
+        name: 'My Porfolio',
         description:
-            'The operating system that powers our Planetaria space shuttles.',
-        link: {href: '#', label: 'github.com'},
-        logo: logoCosmos,
-    },
-    {
-        name: 'OpenShuttle',
-        description:
-            'The schematics for the first rocket I designed that successfully made it to orbit.',
-        link: {href: '#', label: 'github.com'},
-        logo: logoOpenShuttle,
+            'This is the implementation of spotlight UI with my hands to save money and time',
+        link: {href: 'https://github.com/amm834/yours.nvim', label: 'https://github.com/amm834/yours.nvim'},
+        logo: logoHelioStream,
     },
 ]
 
@@ -75,9 +61,12 @@ export default function Projects() {
                                 className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                                 <Image
                                     src={project.logo}
-                                    alt=""
+                                    alt={project.name}
                                     className="h-8 w-8"
+                                    width="30"
+                                    height="30"
                                     unoptimized
+                                    blurDataURL={'add'}
                                 />
                             </div>
                             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">

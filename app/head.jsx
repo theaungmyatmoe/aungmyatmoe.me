@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 
-const modeScript = `
+const darkModeToggleScript = `
   let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
   updateMode()
@@ -43,7 +43,7 @@ export default function Head() {
             <link rel="icon" href="/favicon.ico"/>
             <Script
                 dangerouslySetInnerHTML={{
-                    __html: modeScript,
+                    __html: darkModeToggleScript,
                 }}
             />
         </>
