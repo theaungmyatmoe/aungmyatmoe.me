@@ -4,7 +4,7 @@ export default function Head() {
             <title>Uses - Aung Myat Moe</title>
             <meta
                 name="description"
-                content="Software I use, gadgets I love, and other things I recommend."
+                content="Software I use, I love, and other things I recommend."
             />
         </>
     )

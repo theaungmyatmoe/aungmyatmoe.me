@@ -1,5 +1,3 @@
-import Head from 'next/head'
-
 import {Card} from '@/components/Card'
 import {Section} from '@/components/Section'
 import {SimpleLayout} from '@/components/SimpleLayout'
@@ -29,29 +27,33 @@ export default function Uses() {
     return (
         <>
             <SimpleLayout
-                title="Software I use, gadgets I love, and other things I recommend."
+                title="Software I use, I love, and other things I recommend."
                 intro="I use this tools to speed up my daily life."
             >
                 <div className="space-y-20">
                     <ToolsSection title="Workstation">
                         <Tool title="14” Acer E14 Laptop">
-                            I was using an Intel-based 14” Intel Low End Notebook to survive.
+                            I'm currently using an Intel-based 14” Acer Low End Notebook, Rapoo wireless mouse which is
+                            my
+                            favorite brand and integrated keyboard which comes with Acer.
                         </Tool>
                     </ToolsSection>
                     <ToolsSection title="Development tools">
                         <Tool title="Jetbrains IDEs">
-                            I'm a huge fan of JetBrains because of its LSP and great customer service.
+                            I'm a huge fan of Jetbrains products. They give me an opportunity not to memorize language
+                            syntax and built-in functions or even a framework's APIs. And also, they come with built-in
+                            linter and autocompletion which is my favorite part of their IDEs.
                         </Tool>
                         <Tool title="Nvim">
-                            A good text editor which force me to learn LSP, vim keybindings and how to build a text editor from scratch without re-inventing the wheel.
-                        </Tool>
-                        <Tool title="Gnome Terminal">
-                         Minimal and easy to use terminal for ubuntu.
+                            Nvim is good text editor which is a new flavor of vim intended to be customizable for
+                            developer. It force me to learn Language Server Protocols (LSP), vim keybindings and how to
+                            build a full-fledged text
+                            editor a.k.a customm IDE from scratch without re-inventing the wheel.
                         </Tool>
                     </ToolsSection>
                     <ToolsSection title="Productivity">
                         <Tool title="Notion">
-                            The great note taking app I've found in this universe.
+                            Notion is my note taking app of choice and will probably continue to be so for a long time.
                         </Tool>
 
                     </ToolsSection>

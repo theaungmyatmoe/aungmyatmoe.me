@@ -35,7 +35,7 @@ const darkModeToggleScript = `
     updateMode()
   }
 `
-export default function Head() {
+export default async function Head() {
     return (
         <>
             <title>Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast</title>

@@ -1,3 +1,3 @@
 export default function Home() {
-    console.log('hey')
+    console.log('home page')
 }
