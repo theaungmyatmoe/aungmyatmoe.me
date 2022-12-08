@@ -281,7 +281,7 @@ export function Header() {
                 setProperty('--header-position', 'sticky')
             }
 
-            setProperty('--content-offset', `${downDelay}px`)
+            setProperty('--contents-offset', `${downDelay}px`)
 
             if (isInitial.current || scrollY < downDelay) {
                 setProperty('--header-height', `${downDelay + height}px`)
@@ -406,7 +406,7 @@ export function Header() {
                     </Container>
                 </div>
             </header>
-            {isHomePage && <div style={{height: 'var(--content-offset)'}}/>}
+            {isHomePage && <div style={{height: 'var(--contents-offset)'}}/>}
         </>
     )
 }
