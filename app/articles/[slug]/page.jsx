@@ -1,9 +1,14 @@
 import {getAllArticles, getArticleBySlug} from "@/lib/api";
 import {formatDate} from "@/lib/formatDate";
 import {Prose} from "@/components/Prose";
+import MDXRemote from "@/components/MDXRemote";
+import renderMarkdownToHTML from "@/lib/renderMarkdownToHTML";
 
+const components = {}
 export default async function ArticlePageBySlug({params: {slug}}) {
     const {meta, content} = await getArticleBySlug(slug)
+
+    const mdxSource = await renderMarkdownToHTML(content)
 
     return (
         <article>
@@ -20,8 +25,7 @@ export default async function ArticlePageBySlug({params: {slug}}) {
                 </time>
             </header>
             <Prose className="mt-8">
-                {/* TODO: render markdown at here */}
-                Markdown here
+                <MDXRemote {...mdxSource} components={components}/>
             </Prose>
         </article>
     )
