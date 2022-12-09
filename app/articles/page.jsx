@@ -32,8 +32,10 @@ function Article({article}) {
     )
 }
 
-export default function ArticlePage() {
-    const articles = getAllArticles()
+export default async function ArticlePage() {
+
+    const articles = await getAllArticles()
+
     return (
         <SimpleLayout
             title="Writing on programming,  what I've done and what I'm doing"
