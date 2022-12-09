@@ -222,7 +222,7 @@ module.exports = {
                         fontSize: theme('fontSize.sm')[0],
                         fontWeight: theme('fontWeight.medium'),
                         backgroundColor: 'var(--tw-prose-pre-bg)',
-                        borderRadius: theme('borderRadius.sm'),
+                        borderRadius: theme('borderRadius.lg'),
                         padding: theme('spacing.8'),
                         overflowX: 'auto',
                         border: '1px solid',
