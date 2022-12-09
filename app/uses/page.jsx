@@ -46,9 +46,9 @@ export default function Uses() {
                         </Tool>
                         <Tool title="Nvim">
                             Nvim is good text editor which is a new flavor of vim intended to be customizable for
-                            developer. It force me to learn Language Server Protocols (LSP), vim keybindings and how to
+                            developer. It forces me to learn Language Server Protocols (LSP), vim keybindings and how to
                             build a full-fledged text
-                            editor a.k.a customm IDE from scratch without re-inventing the wheel.
+                            editor a.k.a custom IDE from scratch without re-inventing the wheel.
                         </Tool>
                     </ToolsSection>
                     <ToolsSection title="Productivity">

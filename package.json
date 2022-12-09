@@ -9,7 +9,6 @@
     "@headlessui/react": "^1.7.4",
     "@tailwindcss/typography": "^0.5.8",
     "clsx": "^1.2.1",
-    "eslint": "^8.29.0",
     "fast-glob": "^3.2.12",
     "focus-visible": "^5.2.0",
     "gray-matter": "^4.0.3",
