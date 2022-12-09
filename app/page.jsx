@@ -21,26 +21,15 @@ import {getAllArticles} from "@/lib/api";
 
 function MailIcon(props) {
     return (
-        <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-            {...props}
-        >
+        <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
             <path
-                d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-                className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-            />
-            <path
-                d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
-                className="stroke-zinc-400 dark:stroke-zinc-500"
+                fillRule="evenodd"
+                d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
             />
         </svg>
     )
 }
+
 
 function BriefcaseIcon(props) {
     return (
@@ -79,7 +68,6 @@ function ArrowDownIcon(props) {
 }
 
 function Article({article}) {
-    console.log(article)
     return (
         <Card as="article">
             <Card.Title href={`/articles/${article.meta.slug}`}>
@@ -96,7 +84,7 @@ function Article({article}) {
 
 function SocialLink({icon: Icon, ...props}) {
     return (
-        <Link className="group -m-1 p-1" {...props}>
+        <Link className="group -m-1 p-1" {...props} target="_blank">
             <Icon
                 className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"/>
         </Link>
@@ -218,20 +206,11 @@ function Photos() {
 
 export default async function Home() {
 
-    const articles = (await getAllArticles()).slice(0, 4)
+    const articles = (await getAllArticles())
+        .slice(0, 4)
 
     return (
         <>
-            <Head>
-                <title>
-                    Spencer Sharp - Software designer, founder, and amateur astronaut
-                </title>
-                <meta
-                    name="description"
-                    content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
-                />
-            </Head>
-
             <Container className="mt-9">
                 <div className="max-w-2xl">
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
@@ -246,24 +225,24 @@ export default async function Home() {
                     {/* Social icons */}
                     <div className="mt-6 flex gap-6">
                         <SocialLink
-                            href="https://twitter.com"
+                            href="https://twitter.com/_amm834"
                             aria-label="Follow on Twitter"
                             icon={TwitterIcon}
                         />
                         <SocialLink
-                            href="https://instagram.com"
-                            aria-label="Follow on Instagram"
-                            icon={InstagramIcon}
-                        />
-                        <SocialLink
-                            href="https://github.com"
+                            href="https://github.com/amm834"
                             aria-label="Follow on GitHub"
                             icon={GitHubIcon}
                         />
                         <SocialLink
-                            href="https://linkedin.com"
+                            href="https://linkedin.com/AungMyatMoe"
                             aria-label="Follow on LinkedIn"
                             icon={LinkedInIcon}
+                        />
+                        <SocialLink
+                            href="mailto:aungmyatmoe834@gmail.com"
+                            aria-label="Follow on LinkedIn"
+                            icon={MailIcon}
                         />
                     </div>
                 </div>
