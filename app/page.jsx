@@ -1,12 +1,11 @@
 import Image from 'next/image'
-import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
 
 import {Button} from '@/components/Button'
 import {Card} from '@/components/Card'
 import {Container} from '@/components/Container'
-import {GitHubIcon, InstagramIcon, LinkedInIcon, TwitterIcon,} from '@/components/SocialIcons'
+import {GitHubIcon, LinkedInIcon, TwitterIcon,} from '@/components/SocialIcons'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -18,6 +17,7 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import {formatDate} from '@/lib/formatDate'
 import {getAllArticles} from "@/lib/api";
+import {generateRssFeed} from "@/lib/generateRssFeed";
 
 function MailIcon(props) {
     return (
@@ -29,7 +29,6 @@ function MailIcon(props) {
         </svg>
     )
 }
-
 
 function BriefcaseIcon(props) {
     return (
@@ -205,6 +204,10 @@ function Photos() {
 }
 
 export default async function Home() {
+    if (process.env.NODE_ENV === 'production') {
+        await generateRssFeed()
+    }
+
 
     const articles = (await getAllArticles())
         .slice(0, 4)

@@ -10,6 +10,7 @@
     "@mapbox/rehype-prism": "^0.8.0",
     "clsx": "^1.2.1",
     "fast-glob": "^3.2.12",
+    "feed": "^4.2.2",
     "focus-visible": "^5.2.0",
     "gray-matter": "^4.0.3",
     "next": "latest",

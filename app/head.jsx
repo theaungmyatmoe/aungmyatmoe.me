@@ -40,11 +40,17 @@ export default async function Head() {
         <>
             <title>Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast</title>
             <meta content="width=device-width, initial-scale=1" name="viewport"/>
+            <Script dangerouslySetInnerHTML={{__html: darkModeToggleScript}}/>
             <link rel="icon" href="/favicon.ico"/>
-            <Script
-                dangerouslySetInnerHTML={{
-                    __html: darkModeToggleScript,
-                }}
+            <link
+                rel="alternate"
+                type="application/rss+xml"
+                href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.xml`}
+            />
+            <link
+                rel="alternate"
+                type="application/feed+json"
+                href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
             />
         </>
     )
