@@ -2,16 +2,18 @@ import {getAllArticles, getArticleBySlug} from "@/lib/api";
 import {formatDate} from "@/lib/formatDate";
 import {Prose} from "@/components/Prose";
 import MDXRemote from "@/components/MDXRemote";
+import ArticleLayout from "@/components/ArticleLayout";
 import renderMarkdownToHTML from "@/lib/renderMarkdownToHTML";
+
 
 const components = {}
 export default async function ArticlePageBySlug({params: {slug}}) {
-    const {meta, content} = await getArticleBySlug(slug)
 
+    const {meta, content} = await getArticleBySlug(slug)
     const mdxSource = await renderMarkdownToHTML(content)
 
     return (
-        <article>
+        <>
             <header className="flex flex-col">
                 <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                     {meta.title}
@@ -27,7 +29,9 @@ export default async function ArticlePageBySlug({params: {slug}}) {
             <Prose className="mt-8">
                 <MDXRemote {...mdxSource} components={components}/>
             </Prose>
-        </article>
+            <article>
+            </article>
+        </>
     )
 }
 

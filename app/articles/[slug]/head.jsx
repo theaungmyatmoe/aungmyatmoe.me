@@ -1,6 +1,6 @@
 import {getArticleBySlug} from "@/lib/api";
 
-export default async function Head({params: {slug}}) {
+export default async function ArticleHeadBySlug({params: {slug}}) {
     const {meta} = await getArticleBySlug(slug)
     return (
         <>
