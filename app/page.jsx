@@ -70,7 +70,7 @@ function Article({article}) {
     return (
         <Card as="article">
             <Card.Title href={`/articles/${article.meta.slug}`}>
-                {article.title}
+                {article.meta.title}
             </Card.Title>
             <Card.Eyebrow as="time" dateTime={article.meta.date} decorate>
                 {formatDate(article.meta.date)}
