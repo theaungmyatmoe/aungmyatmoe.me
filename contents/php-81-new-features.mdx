@@ -1,0 +1,248 @@
+---
+title: PHP 8.1 new features
+description: What's new in PHP 8.1?
+excerpt: What's new in PHP 8.1?
+date: '2021-12-12T17:30:00.000Z'
+---
+
+ခုလ၂၅ ရက်နေ့မှာ PHP ရဲ့ \*\*Version 8.1 Stable Release\*\* ထွက်မှာဖြစ်လို့ Feature အသစ်တွေကိုပြောသွားမှာဖြစ်ပါတယ်။&#x20;
+
+\## Enum
+
+Enum က v8.1 မှာ Support ပေးမယ့် Data Type အသစ်တစ်မျိုးဖြစ်ပြီးတော့ long term အနေနဲ့ Enumerated Type လို့ခေါ်ပါတယ်။
+
+Enum ကို Support ပေးသင့်တာကြာပါပြီ။ အသုံးဝင်တဲ့ Type မို့လို့ဖြစ်ပါတယ်။
+
+\`\`\`php
+
+enum Role
+
+{
+
+&#x20;   case ADMIN;
+
+&#x20;   case USER;
+
+}
+
+\`\`\`
+
+PHP မှာ Role တွေသတ်မှတ်တဲ့အခါ 1 (သို့မဟုတ်) 0 ၊ String Literal တွေနဲ့သတ်မှတ်ကြပါတယ်။ ဒီလိုအခြေအနေမျိုးမှာဆိုရင် Enum တွေကိုအသုံးပြုနိုင်မှာဖြစ်ပါတယ်။
+
+သူတို့ရဲ့ Default Value တွေကတော့ Array Position တွေလိုမျိုးပဲ 0 ကနေစမှာဖြစ်ပါတယ်။ Enum တွေကိုခေါ်သုံးချင်တဲ့အခါ Enum::KEY အဖြစ်နဲ့ခေါ်သုံးလို့ရပါတယ်။ Role Enum က Admin ကိုခေါ်ချင်ရင် Role::ADMIN လို့လှမ်းခေါ်ရုံပါပဲ။
+
+သိကြတဲ့အတိုင်း PHP သည် Dynamic Typed Language အမျိုးအစားဖြစ်တဲ့အတွက် Enum တွေကို Custom String Value တွေပေးလို့ရပါတယ်။&#x20;
+
+Enum တွေကို Custom Value ပေးချင်ရင် အောက်ပါအတိုင်းပေးလို့ရပါတယ်။ Technical Term အရ Backed Enum လို့ခေါ်ပြီးတော့ Custom Value မပါတဲ့ Enum တွေကို Pure Enum လို့ခေါ်ပါတယ်။
+
+Backed Enum တွေကို Return Value သတ်မှတ်တဲ့အခါမှာ String (သို့မဟုတ်) Integer နှစ်မျိုးပဲသတ်မှတ်လို့ရမှာကိုသတိပြုပါ။
+
+\`\`\`php
+
+enum Role:string
+
+{
+
+&#x20;   case ADMIN = "admin";
+
+&#x20;   case USER = "user";
+
+}
+
+\`\`\`
+
+Database Table ထဲက Role တွေမှာ String Literal နဲ့သတ်မှတ်ထားတဲ့အခါမျိုးဆိုရင် Role Enum ကိုသုံးပြီးတော့ အောက်ပါအတိုင်းတိုက်စစ်လို့ရမှာဖြစ်ပါတယ်။
+
+\`\`\`php
+
+if(auth()->role === Role::ADMIN->value)
+
+&#x20;   next();
+
+else return false;
+
+\`\`\`
+
+Enum တွေဟာ Class လိုမျိုးပဲ Method တွေပါသတ်မှတ်လို့ရပါတယ်။
+
+\`\`\`php
+
+enum Cards
+
+{
+
+&#x20;   case JACK;
+
+&#x20;   case QUEEN;
+
+&#x20;   case KING;
+
+&#x20;  &#x20;
+
+&#x20;   public function name(): string
+
+&#x20;   {
+
+&#x20;       return match($this)&#x20;
+
+&#x20;       {
+
+&#x20;           Cards::JACK => 'jack',  &#x20;
+
+&#x20;           Cards:: QUEEN => 'queen',  &#x20;
+
+&#x20;           Cards::KING => 'king',  &#x20;
+
+&#x20;       };
+
+&#x20;   }
+
+}
+
+$card = Cards::KING;
+
+$card->name(); // king
+
+\`\`\`
+
+Enum ထဲမှာ Static Function တွေကိုလည်းသတ်မှတ်နိုင်မှာဖြစ်ပါတယ်။
+
+\`Cards::JACK\` အစား \`self::JACK\` အဖြစ်လည်းအသုံးပြုလို့ရပါတယ်။
+
+Enum တွေသည် Object ပဲဖြစ်တဲ့အတွက်ကြောင့် ဘယ် Enum ရဲ့ instance ဖြစ်မဖြစ်ကိုလည်းစစ်လို့ရပါတယ်။
+
+\`\`\`php
+
+$card insanceof Status; // true
+
+\`\`\`
+
+Enum ရဲ့ Name ကိုလိုချင်ရင် $card->name အဖြစ်နဲ့ယူလို့ရပါတယ်။ PHP RFC ကတော့ Debugging အတွက်ပဲသုံးသင့်တယ်လို့ပြောထားပါတယ်။
+
+\## Fibers
+
+Fibers တွေက \*\*v8.1\*\* မှာ Support ပေးမယ့် Low Level Mechanism တစ်ခုဖြစ်ပါတယ်။ Thread တွေ Parallel အလုပ်လုပ်ဖို့အတွက် Support ပေးထားတဲ့ကောင်ဖြစ်ပါတယ်။&#x20;
+
+v7.0 မှာကတည်းက Support ပေးပေမဲ့ခု Fiber က Higher Level Abstraction ပုံစံအဖြစ်နဲ့ Support ပေးတာဖြစ်ပါတယ်။
+
+ကွာတာက PHP မှာ Support ပေးတဲ့ Thread က Green Thread ဖြစ်တဲ့အတွက် User Level Space မှာပဲအလုပ်လုပ်မှာဖြစ်ပါတယ်။&#x20;
+
+Green Thread ကို Java VM v1.1 မှာသုံးခဲ့ပါတယ်။ JVM မှာ Implement လုပ်ထားတဲ့ Green Thread Model က Java ကိုနှေးစေတဲ့အတွက်ဖြုတ်လိုက်တာဖြစ်ပါတယ်။
+
+PHP မှာ Fiber Implement လုပ်ရတဲ့အဓိကအကြောင်းအရင်းက Asynchronously အလုပ်လုပ်နိုင်ဖို့အတွက်‌ဖြစ်ပါတယ်။ ဒီနေရာမှာ Async ကိုရှင်းဖို့လိုပါတယ်။
+
+ကျွန်တော်တို့ Request သုံးခုပို့စရာရှိတယ်ဆိုပါစို့။ Synchronous အရဆိုရင် ပထမတစ်ခုကိုပို့မယ်။ ဒုတိယတစ်ခုကိုပထမတစ်ခုပို့ပြီးမှပို့မယ်။ တတိယတစ်ခုကိုလည်းဒုတိယတစ်ခုပို့ပြီးမှပို့မယ်။ အစဉ်လိုက်အလုပ်လုပ်လိမ့်မယ်။ အစဉ်လိုက်ပို့တဲ့အခါမှာ တစ်ခုပြီးမှတစ်ခုလုပ်ရတဲ့အတွက်ကြောင့် စောင့်ရတဲ့အချိန် (Waiting Time) ပိုကြာပါတယ်။ ဒါ့ကြောင့် PHP ရဲ့ I/O Process တွေမှာကြာပါတယ်။ Waiting Time ကို Reduce လုပ်နိုင်ဖို့အတွက် Parallel အလုပ်လုပ်ခိုင်းဖို့လိုပါတယ်။ ဒီအတွက် Asynchronous ဖြစ်လာရတာဖြစ်ပါတယ်။ ခုလိုမျိုး PHP ရဲ့အားနည်းချက်တွေကြောင့် Node JS မှာရနိုင်တဲ့ Asynchronous ပိုင်းကိုမရနိုင်တာဖြစ်ပါတယ်။
+
+Framework တွေအတွက် အဓိကဖြစ်တဲ့အတွက်ကြောင့် ကျွန်တော်ကတော့သုံးမပြတော့ပါဘူး။ JavaScript ရတယ်ဆိုရင် Promise.all နဲ့အလုပ်လုပ်ပုံအတူတူပါပဲ။
+
+\## Array Unpacking&#x20;
+
+\`\`\`php
+
+$a = \[ 1, 2, 3];
+
+$b = \[ 4,5,6, ...$a ]; // \[ 4, 5, 6, 1, 2, 3 ]
+
+\`\`\`
+
+Associated Array တွေမှာလည်းအသုံးပြုနိုင်မှာဖြစ်ပါတယ်။
+
+\## Readonly Properties
+
+Value ကို Read ရုံပဲ Access စေချင်ရင် Read Only ကိုသုံးနိုင်မှာဖြစ်ပါတယ်။
+
+\`\`\`php
+
+class Post {
+
+&#x20;   public function \_\_construct(
+
+&#x20;       public readonly string $title,
+
+&#x20;   ) {}
+
+}
+
+\`\`\`
+
+\## First Class Callable&#x20;
+
+\`\`\`php
+
+function foo(int $a, int $b) { /\* … \*/ }
+
+$foo = foo(...);
+
+$foo(a: 1, b: 2);
+
+\`\`\`
+
+Argument တွေကို Passing မပေးချင်တဲ့အခါသုံးနိုင်ပါတယ်။
+
+\## Pure intersection types&#x20;
+
+\`\`\`php
+
+function generateSlug(HasTitle\&HasId $post) {
+
+&#x20;   return strtolower($post->getTitle()) . $post->getId();
+
+}
+
+\`\`\`
+
+Multiple Interface တွေ နဲ့တွဲအလုပ်လုပ်တဲ့အခါမျိုးကြရင်အဆင်ပြေပါမယ်။
+
+အထက်က ဥပမာမှာဆိုရင် $post က HasTitle နဲ့ HasId Interface ကို Implement ထားတဲ့ကောင်ဖြစ်မှရပါမယ်။ခုလိုအချိန်မျိုးကြရင်သုံးလို့ရမှာပါ။
+
+\## Never return data type
+
+Program Flow ကို Break ပါသွားတဲ့ Function တွေမှာအသုံးပြုနိုက်ပါတယ်။
+
+Redirect function မှာဆိုရင် Header ကို Sent ပြီးတာနဲ့ Code Execution ရပ်လိုက်မှာဖြစ်ပါတယ်။ ဒီလိုအခြေအနေမျိုးဆိုရင် void အစား never ကိုသုံးရတာသင့်တော်ပါတယ်။
+
+\`\`\`php
+
+function redirect(mixed $url): never
+
+{
+
+&#x20;   header("Location: $url");
+
+&#x20;   exit;
+
+}
+
+\`\`\`
+
+\## array\_is\_list Function
+
+Indexing Array ဖြစ်၊ မဖြစ်စစ်ချင်တဲ့အခါမျိုးမှာသုံးနိုင်ပါတယ်။
+
+\`\`\`php
+
+$list = \["a", "b", "c"];
+
+array\_is\_list($list); // true
+
+\`\`\`
+
+\## Final class constants&#x20;
+
+PHP ရဲ့ constant တွေကို Inheritance လုပ်တဲ့အချိန်မှာ Override လို့ရပါတယ်။ Override မဖြစ်စေချရင် Parent Class ရဲ့ Constant မှာ final လေးထည့်ပေးရုံပါပဲ။
+
+\`\`\`php
+
+class Foo
+
+{
+
+&#x20;   final public const X = "foo";
+
+}
+
+\`\`\`
+
+ကျန်တဲ့ Minor changes တွေကို Rfc မှာသွားကြည့်လို့ရပါတယ်။
+
+https://wiki.php.net/rfc
