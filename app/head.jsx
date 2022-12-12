@@ -62,7 +62,7 @@ export default async function Head() {
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
             <link rel="manifest" href="/site.webmanifest"/>
 
-            <!-- Open Graph / Facebook -->
+            {/* Facebook */}
             <meta property="og:type" content="website"/>
             <meta property="og:url" content="https://aungmyatmoe.me/"/>
             <meta property="og:title"
@@ -71,7 +71,7 @@ export default async function Head() {
                   content="He is a Software Engineer who is passionate about developing web application  and low level engineering."/>
             <meta property="og:image" content="/apple-touch-icon.png"/>
 
-            <!-- Twitter -->
+            {/*    Twitter */}
             <meta property="twitter:card" content="summary_large_image"/>
             <meta property="twitter:url" content="https://aungmyatmoe.me/"/>
             <meta property="twitter:title"
