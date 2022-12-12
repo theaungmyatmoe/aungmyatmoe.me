@@ -24,6 +24,19 @@ export default defineConfig({
                 label: 'Articles',
                 path: 'contents',
                 format: 'mdx',
+                ui: {
+                    filename: {
+                        slugify: values => {
+                            return `${
+                                values?.title?.toLowerCase()
+                                    .trim()
+                                    .replace(/[^\w\s-]/g, "")
+                                    .replace(/[\s_-]+/g, "-")
+                                    .replace(/^-+|-+$/g, "")
+                            }`
+                        }
+                    }
+                },
                 fields: [
                     {
                         type: 'string',
