@@ -40,6 +40,9 @@ export default async function Head() {
         <>
             <title>Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast</title>
             <meta content="width=device-width, initial-scale=1" name="viewport"/>
+            <meta name="description" content="Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast"/>
+            <meta name="robots" content="all" />
+
             <Script dangerouslySetInnerHTML={{__html: darkModeToggleScript}}/>
             <link rel="icon" href="/favicon.ico"/>
             <link
