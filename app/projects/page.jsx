@@ -2,31 +2,92 @@ import Image from 'next/image'
 
 import {Card} from '@/components/Card'
 import {SimpleLayout} from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
+import logoWuttyi from '@/images/logos/wuttyi.svg'
+import logoYoursNvim from '@/images/logos/logoYoursNvim.png'
+import logoAungMyatMoe from '@/images/avatar.jpg'
+import logoRina from '@/images/logos/logoRina.jpg'
+import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoMeow from '@/images/logos/meow-min.png'
+
 
 const projects = [
     {
+        name: 'My Intuitive Portfolio',
+        description: 'This is my portfolio and blog which was crafted to share my projects and knowledge and resume.',
+        link: {href: 'https://github.com/amm834/yours.nvim', label: 'https://github.com/amm834/yours.nvim'},
+        logo: logoAungMyatMoe,
+    },
+    {
         name: 'Wuttyi Lang',
         description:
-            'LISP like Functional and OO paradigms supported programming language',
-        link: {href: 'https://wuttyi.vercel.app/', label: 'https://wuttyi.vercel.app/'},
-        logo: logoAnimaginary,
+            'LISP (or) Schema like Functional and OOP supported programming language',
+        link: {
+            href: 'https://wuttyi.vercel.app/',
+            label: 'https://wuttyi.vercel.app/'
+        },
+        logo: logoWuttyi,
     },
     {
         name: 'Yours.Nvim',
         description:
-            'The next level level minimalist IDE layer for nvim which was inspired by the new UI of Jetbrains IDE',
-        link: {href: 'https://github.com/amm834/yours.nvim', label: 'https://github.com/amm834/yours.nvim'},
-        logo: logoHelioStream,
+            'The next level minimalist IDE layer for nvim which was inspired by the new UI of Jetbrains IDE',
+        link: {
+            href: 'https://github.com/amm834/yours.nvim',
+            label: 'https://github.com/amm834/yours.nvim'
+        },
+        logo: logoYoursNvim,
     },
     {
-        name: 'My Porfolio',
+        name: 'Rina PHP Framework',
         description:
-            'This is the implementation of spotlight UI with my hands to save money and time',
-        link: {href: 'https://github.com/amm834/yours.nvim', label: 'https://github.com/amm834/yours.nvim'},
-        logo: logoHelioStream,
+            'Rina is a MVC powered PHP MVC framework which upscale your PHP web application',
+        link: {
+            href: 'https://github.com/amm834/rina-php-mvc-framework',
+            label: 'https://github.com/amm834/rina-php-mvc-framework'
+        },
+        logo: logoRina,
     },
+    {
+        name: 'Painify Credit Card Validator',
+        description:
+            'Painify is a credit card number validator built on the top of luhn algorithm.',
+        link: {
+            href: 'https://github.com/amm834/cc',
+            label: 'https://github.com/amm834/cc'
+        },
+        logo: logoPlanetaria,
+    },
+    {
+        name: 'Omini Food',
+        description:
+            'Ominifood is a food delivering website built to recap CSS',
+        link: {
+            href: 'https://ominifood.vercel.app/',
+            label: 'https://ominifood.vercel.app/'
+        },
+        logo: logoPlanetaria,
+    },
+    {
+        name: 'Natour',
+        description:
+            'Natour is a travel service provider website which was developed to learn SCSS in depth.',
+        link: {
+            href: 'https://natour-solo.vercel.app/',
+            label: 'https://natour-solo.vercel.app/'
+        },
+        logo: logoPlanetaria,
+    },
+    {
+        name: 'Meow',
+        description:
+            'Meow is a package manager for the Termux which is faster than built-in package manager.',
+        link: {
+            href: 'https://github.com/amm834/meow',
+            label: 'https://github.com/amm834/meow'
+        },
+        logo: logoMeow,
+    },
+
 ]
 
 function LinkIcon(props) {
@@ -58,7 +119,7 @@ export default function Projects() {
                                 <Image
                                     src={project.logo}
                                     alt={project.name}
-                                    className="h-8 w-8"
+                                    className="h-8 w-8 rounded-full"
                                     width="30"
                                     height="30"
                                     unoptimized

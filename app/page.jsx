@@ -11,10 +11,9 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
+import logoMcy from '@/images/logos/mcy.jpg'
+import logoWde from '@/images/logos/wde.jpg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
 import {formatDate} from '@/lib/formatDate'
 import {getAllArticles} from "@/lib/api";
 import {generateRssFeed} from "@/lib/generateRssFeed";
@@ -93,9 +92,19 @@ function SocialLink({icon: Icon, ...props}) {
 const Resume = () => {
     let resume = [
         {
-            company: 'Planetaria',
-            title: 'CEO',
-            logo: logoPlanetaria,
+            company: 'Myanmar Cyber Youths',
+            title: 'Founder',
+            logo: logoMcy,
+            start: '2021',
+            end: {
+                label: 'Present',
+                dateTime: new Date().getFullYear(),
+            },
+        },
+        {
+            company: 'Web Developer Environment',
+            title: 'Founder',
+            logo: logoWde,
             start: '2019',
             end: {
                 label: 'Present',
@@ -103,25 +112,14 @@ const Resume = () => {
             },
         },
         {
-            company: 'Airbnb',
-            title: 'Product Designer',
-            logo: logoAirbnb,
-            start: '2014',
-            end: '2019',
-        },
-        {
-            company: 'Facebook',
-            title: 'iOS Software Engineer',
-            logo: logoFacebook,
-            start: '2011',
-            end: '2014',
-        },
-        {
-            company: 'Starbucks',
-            title: 'Shift Supervisor',
-            logo: logoStarbucks,
-            start: '2008',
-            end: '2011',
+            company: 'Freelancer',
+            title: 'Full Stack Web Developer',
+            logo: logoPlanetaria,
+            start: '2019',
+            end: {
+                label: 'Present',
+                dateTime: new Date().getFullYear()
+            }
         },
     ]
 
@@ -136,7 +134,7 @@ const Resume = () => {
                     <li key={roleIndex} className="flex gap-4">
                         <div
                             className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                            <Image src={role.logo} alt="" className="h-7 w-7" unoptimized/>
+                            <Image src={role.logo} alt="" className="h-7 w-7 rounded-full" unoptimized/>
                         </div>
                         <dl className="flex flex-auto flex-wrap gap-x-2">
                             <dt className="sr-only">Company</dt>
