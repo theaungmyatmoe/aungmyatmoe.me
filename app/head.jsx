@@ -61,6 +61,25 @@ export default async function Head() {
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
             <link rel="manifest" href="/site.webmanifest"/>
+
+            <!-- Open Graph / Facebook -->
+            <meta property="og:type" content="website"/>
+            <meta property="og:url" content="https://aungmyatmoe.me/"/>
+            <meta property="og:title"
+                  content="Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast"/>
+            <meta property="og:description"
+                  content="He is a Software Engineer who is passionate about developing web application  and low level engineering."/>
+            <meta property="og:image" content="/apple-touch-icon.png"/>
+
+            <!-- Twitter -->
+            <meta property="twitter:card" content="summary_large_image"/>
+            <meta property="twitter:url" content="https://aungmyatmoe.me/"/>
+            <meta property="twitter:title"
+                  content="Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast"/>
+            <meta property="twitter:description"
+                  content="He is a Software Engineer who is passionate about developing web application  and low level engineering."/>
+            <meta property="twitter:image" content="/apple-touch-icon.png"/>
+
         </>
     )
 }
