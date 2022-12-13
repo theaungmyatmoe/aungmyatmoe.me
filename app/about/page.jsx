@@ -49,27 +49,27 @@ export default function About() {
                     </div>
                     <div className="lg:order-first lg:row-span-2">
                         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                            I’m Aung Myat Moe. I live in Letpadan, where I've learn and developed for future.
+                            I’m Aung Myat Moe. I live in Letpadan, where I learn and develop for future.
                         </h1>
                         <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                             <p>
                                 I grew up in a small town in Letpadan.
                                 After I got my hands wet with Javascript I soon discovered my passion for programming
                                 while
-                                hacking on some VPN stuff using bash progrmming language back in 2018.
+                                hacking on some VPN stuff using bash back in 20181.
                             </p>
                             <p>
                                 I have more than 3 years of experience as a web developer and love working with Laravel,
                                 Vue,
                                 React,
                                 Next
-                                and other hip frameworks. I've experienced in developing web web services.
+                                and other hip frameworks. I am experienced in developing web web services.
                             </p>
                             <p>
                                 I enjoy building elegant,
                                 interactive effect heavy javascript
                                 applications with an eye
-                                on animated content. In my spare time, I like to
+                                on animated content. In my spare time I like to
                                 play football with my friends.
                             </p>
                             <p>
