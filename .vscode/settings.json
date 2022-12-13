@@ -1,5 +1,7 @@
 {
   "typescript.tsdk": "node_modules/.pnpm/typescript@4.8.4/node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "editor.fontFamily": "'Jetbrains Mono','Droid Sans Mono', 'monospace', monospace"
+  "editor.fontFamily": "'Jetbrains Mono','Droid Sans Mono', 'monospace', monospace",
+  "editor.minimap.autohide": true,
+  "editor.minimap.maxColumn": 0
 }
