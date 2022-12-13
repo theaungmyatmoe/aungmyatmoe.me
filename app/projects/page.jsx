@@ -14,7 +14,7 @@ const projects = [
     {
         name: 'My Intuitive Portfolio',
         description: 'This is my portfolio and blog which was crafted to share my projects and knowledge and resume.',
-        link: {href: 'https://github.com/amm834/yours.nvim', label: 'https://github.com/amm834/yours.nvim'},
+        link: {href: 'https://github.com/amm834/aungmyatmoe.me', label: 'https://github.com/amm834/aungmyatmoe.me'},
         logo: logoAungMyatMoe,
     },
     {
