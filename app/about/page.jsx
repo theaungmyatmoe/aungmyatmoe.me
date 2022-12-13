@@ -53,30 +53,24 @@ export default function About() {
                         </h1>
                         <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                             <p>
-                                I grew up in a small town in Letpadan.
-                                After I got my hands wet with Javascript I soon discovered my passion for programming
-                                while
-                                hacking on some VPN stuff using bash back in 20181.
+                                Letpadan is a small town where I grew up and had a buck of childhood memories. After I
+                                got my hands wet with Javascript, I soon discovered my passion was programming while
+                                hacking on some VPNs with Bash back in 2018.
                             </p>
                             <p>
-                                I have more than 3 years of experience as a web developer and love working with Laravel,
-                                Vue,
-                                React,
-                                Next
-                                and other hip frameworks. I am experienced in developing web web services.
+                                I have about three years of experience as a web developer and love working with Laravel,
+                                Vue, React, Next, and other hip frameworks. I have experience in developing web
+                                services.
                             </p>
                             <p>
-                                I enjoy building elegant,
-                                interactive effect heavy javascript
-                                applications with an eye
-                                on animated content. In my spare time I like to
-                                play football with my friends.
+                                I enjoy building elegant, interactive effect heavy javascript applications with an eye
+                                on animated content. In my spare time, I fancy playing football with my mates. Every
+                                once in a while, I tend to explore catching-edge technologies.
                             </p>
                             <p>
-                                Aside from work, I’ve worked on tons of little projects over the years. Many of them are
-                                open-source, so if you see something that piques your
-                                interest, check out the code and contribute if you have ideas for how it can be
-                                improved.
+                                Aside from work, I’ve worked on little projects over the years. Many of them are
+                                open-source. Hence, you can check out and contribute the code if you see any matters and
+                                ideas about how it should be enhanced and maintained.
                             </p>
 
                         </div>
