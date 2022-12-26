@@ -17,6 +17,8 @@ export function Footer() {
   return (
     <footer className="mt-32">
       <Container.Outer>
+
+        <div className='absolute w-full h-[300px] gradient-01 opacity-40 z-[0] -bottom-[30px] rounded-tl-[140px]' />
         <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
           <Container.Inner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
