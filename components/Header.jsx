@@ -352,6 +352,7 @@ export function Header() {
                     marginBottom: 'var(--header-mb)',
                 }}
             >
+        <div className='absolute w-full h-[300px] gradient-03 opacity-40 z-[0] -bottom-[30px] rounded-tl-[140px]' />
                 {isHomePage && (
                     <>
                         <div
