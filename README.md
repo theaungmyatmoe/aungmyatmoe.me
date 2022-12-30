@@ -1,6 +1,6 @@
 # My Intuitive Portfolio
 
-This is my very first production grade project in Next.js and React which uses next-13 latest features.
+This is my very first production grade project in Next js and React which uses next-13 latest features.
 
 # Features
 
