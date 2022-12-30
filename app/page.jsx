@@ -214,11 +214,10 @@ export default async function Home() {
         <>
             <Container className="mt-9">
                 <div className="max-w-2xl">
-                    <div className='absolute w-full h-[300px] pointer-events-none opacity-30 hero-gradient z-[0] -top-[30px] rounded-tl-[140px]'/>
-                    <h1 className="text-4xl font-bold tracking-tight z-10 text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                         Software Engineer, Founder and Open Source Enthusiast
                     </h1>
-                    <p className="mt-6 text-base text-zinc-600 z-10 dark:text-zinc-400">
+                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                         I’m Aung Myat Moe, a software engineer and founder based in Letpadan.
                         I’m the founder of Myanmar Cyber Youths and Web Dev Environment, where we develop
                         technologies that empower regular people to explore space on their
