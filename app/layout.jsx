@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+import {AnalyticsWrapper} from "@/components/AnalyticsWrapper";
 
 export default async function RootLayout({children}) {
     return (
@@ -16,8 +17,9 @@ export default async function RootLayout({children}) {
             <div className="relative">
                 <Header/>
                 {children}
-                <Footer/>
             </div>
+            <Footer/>
+            <AnalyticsWrapper/>
             </body>
             </html>
         </>
