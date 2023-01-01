@@ -1,0 +1,56 @@
+---
+title: State Management in React
+description: >-
+  State Management လို့ပြောလိုက်တာနဲ့ Client State ဖြစ်တဲ့ Application State
+  ကိုပဲပြေးမြင်ကြတာပါပဲ။ ဒါပေမဲ့ React မှာက State Management
+  ဖို့အတွက်စဉ်းစားတာနဲ့ Client and Server State ဆိုပြီးတော့စဉ်းစားမှကိုရတာ။
+  ကျွန်တော်က Vue Dev မို့လို့ဒီလိုမျိုးသုံးရတာမျိုးကိုတစ်ခါမှမကြုံဖူးဘူး။
+  ကျွန်တော်အတွက်အာရုံနောက်တယ်။ ဒါပွင့်ပွင့်လင်းလင်းပြောတာ။  ဒီပြဿနာကိုရှင်းဖို့
+  Client State ကိုအရင်ကြည့်တယ်။ ဒီတော့ Client State မှာဖြေရှင်းဖို့က Solution
+  တော်တော်များတယ်။ ဒါပေမဲ့ကျွန်တော်‌အသုံးများတာကိုပဲပြောသွားမှာပါ။ ကျန်တဲ့ React
+  Dev တွေလည်းကျွန်တော့်လိုပဲသုံးကြတာပါပဲ။ ကွာတာက ကျွန်တော်က Vue ‌ကနေ Migrate
+  လာတာ။ 
+excerpt: >-
+  State Management လို့ပြောလိုက်တာနဲ့ Client State ဖြစ်တဲ့ Application State
+  ကိုပဲပြေးမြင်ကြတာပါပဲ။ ဒါပေမဲ့ React မှာက State Management
+  ဖို့အတွက်စဉ်းစားတာနဲ့ Client and Server State ဆိုပြီးတော့စဉ်းစားမှကိုရတာ။
+  ကျွန်တော်က Vue Dev မို့လို့ဒီလိုမျိုးသုံးရတာမျိုးကိုတစ်ခါမှမကြုံဖူးဘူး။
+  ကျွန်တော်အတွက်အာရုံနောက်တယ်။ ဒါပွင့်ပွင့်လင်းလင်းပြောတာ။  ဒီပြဿနာကိုရှင်းဖို့
+  Client State ကိုအရင်ကြည့်တယ်။ ဒီတော့ Client State မှာဖြေရှင်းဖို့က Solution
+  တော်တော်များတယ်။ ဒါပေမဲ့ကျွန်တော်‌အသုံးများတာကိုပဲပြောသွားမှာပါ။ ကျန်တဲ့ React
+  Dev တွေလည်းကျွန်တော့်လိုပဲသုံးကြတာပါပဲ။ ကွာတာက ကျွန်တော်က Vue ‌ကနေ Migrate
+  လာတာ။ 
+date: '2022-12-30T17:30:00.000Z'
+---
+
+State Management လို့ပြောလိုက်တာနဲ့ Client State ဖြစ်တဲ့ Application State ကိုပဲပြေးမြင်ကြတာပါပဲ။ ဒါပေမဲ့ React မှာက State Management ဖို့အတွက်စဉ်းစားတာနဲ့ Client and Server State ဆိုပြီးတော့စဉ်းစားမှကိုရတာ။ ကျွန်တော်က Vue Dev မို့လို့ဒီလိုမျိုးသုံးရတာမျိုးကိုတစ်ခါမှမကြုံဖူးဘူး။ ကျွန်တော်အတွက်အာရုံနောက်တယ်။ ဒါပွင့်ပွင့်လင်းလင်းပြောတာ။
+
+ဒီပြဿနာကိုရှင်းဖို့ Client State ကိုအရင်ကြည့်တယ်။ ဒီတော့ Client State မှာဖြေရှင်းဖို့က Solution တော်တော်များတယ်။ ဒါပေမဲ့ကျွန်တော်‌အသုံးများတာကိုပဲပြောသွားမှာပါ။ ကျန်တဲ့ React Dev တွေလည်းကျွန်တော့်လိုပဲသုံးကြတာပါပဲ။ ကွာတာက ကျွန်တော်က Vue ‌ကနေ Migrate လာတာ။
+
+## Context and Redux
+
+Context ဆိုတာက Prop Drillings ပဲ။ DOM ကို Logical Tree Structure လိုမြင်ကြည့်ပေါ့။ Parent Node ကနေပြီးတော့ Child အထိ Data တွေကို Pass ပေးတာ။ HTML Attribute အနေနဲ့။
+
+Concept ကတော့အတူတူပဲ။ API ပဲကွာသွားတာ။ React မှာ Context တွေကို Provider အနေနဲ့ Parent Node အဖြစ် Pass လိုက်တာ။ သူ့ရဲ့ Children တွေကကြတော့ useContext() နဲ့ယူသူံးပေါ့။ ဒီလိုမျိုး။
+
+Vue မှာကြတော့ Dependency Injection ဆန်ဆန်သွားတယ်။ provide() and inject() နဲ့သုံးတယ်။ Prop Drilling ပဲ။ သူလည်း။ သုံးပုံပဲကွာတာ။ ဒါဆိုရင် Vue Dev အနေနဲ့နားလည်မှာပါ။ နားမလည်ရင်တော့ Vue ရဲ့ Basic Feature တွေမသိဘူးဆိုတာကိုသိထားရပါမယ်။ သင်တန်းတွေလည်းတွေ့ပါတယ်။ ဒီ Concept ကိုချန်ခဲ့တာ။
+
+Context တွေနဲ့ React မှာ State Management တော့ဘာဖြစ်လဲဆိုရင် Context Wrapping Hell ဖြစ်တယ်။ Boilerplate Code တွေ Context Create တဲ့နေရာမှာလည်းဖြစ်တယ်။ နောက်ပြီးတော့ Typescript နဲ့သုံးရင် Type တွေကကျစ်ကျစ်လစ်လစ်မရှိဘူး။ မလိုအပ်ဘဲနဲ့ရေးနေရတာမျိုး။ DRY ပျောက်တယ်။ Replication ဖြစ်တယ်။ ဘာပဲဖြစ်ဖြစ် Context ကိုရှောင်သင့်တယ်။
+
+စစလေ့လာတာတဲ့အခါမျိုးမှာ useState() နဲ့ State တွေထိန်းလို့ရတယ်။ နောက်ပိုင်းကြရင် useReducer() နဲ့သုံးလို့ရတယ်။ Reducer တွေသုံးရင် State တွေကို Action ပေါ်မူတည်ပြီးခိုင်းလို့ရတယ်။ Action Dispatch တာကိုပြောတာ။ ဒီတော့ပိုပြီးတော့ Effective ဖြစ်တာပေါ့။
+
+React မှာ Context ကို YouTuber တွေတော်တော်ကြိုက်တယ်။ ဘာလို့ဆိုလွယ်လို့။ တော်တော်များများက ဘာသုံးရင်ဘာဖြစ်မယ်ဆိုတဲ့ Tradeoffs တွေမသိတဲ့စောက်ရူးတွေ။
+
+React သုံးရင် Reducer တွေသိထားဖို့လိုတယ်။ ဒီကောင်ကိုသိတာနဲ့ Redux ကလွယ်သွားရော။ Redux က Flux Architecture ကို Implement ထားတာ။ တိုက်ရိုက်မဟုတ်ပေမဲ့လို့။ ဒါက Another Story ဖြစ်သွားလို့ Article Series မှာပါမယ်။ Redux စစထွက်ချင်းမှာ Everything is configuration ဖြစ်နေတာ။ ကျွန်တော် Vue လုပ်နေတဲ့ကာလတစ်လျှောက်မှာဒီလိုမျိုးမတွေ့ဖူးဘူး။ Event Bus or Vuex သုံးကြတာပဲ။ လွယ်လွယ်ကူကူပါပဲ။ Config ချတယ်ဆိုတယ်ရှားပါးဖြစ်စဉ်ပဲ။
+
+ဒါပေမဲ့ Redux ကိုကျွန်တော်တကယ်သုံးတဲ့ကာလရောက်တော့ Redux Toolkit လိုကောင်တွေပေါ်လာတယ်။ သူ့က Configuration တွေကိုကျော်ပြီးတော့သုံးလို့ရအောင်လုပ်ပေးထားတာ။ ဘာပဲဖြစ်ဖြစ် Higher Level Dev တွေကဒါပဲသုံးသင့်တာ။ Configuration ချတယ်ဆိုတာ Framework တွေကလုပ်ပေးရမှာ။ အဲ့တာကို ဘာ Complain တက်ကြလဲဆိုရင် Redux သုံးတတ်ချင်ရင် Configuration ကိုချတတ်ရမယ်ဆိုတာရှိသေးတယ်။ Architecture နဲ့ Config တွေ Copy ကူးတာဘာမှမဆိုင်တဲ့ Ideology သက်သက်ပဲ။ ဘာမှဂရုစိုက်စရာမလိုဘူး။ အဲ့လိုပြောလာရင်။ ဒါမျိုးက Moral High Ground ယူတာမျိုးသက်သက်ပဲ။ Redux သုံးရင် Reducer တွေနဲ့ State Management လို့ရတယ်။ ဒါပဲ။ ပြီးပြီ။ Application Management က။
+
+## Server State Management
+
+React ရဲ့အဓိကပြဿနာကဒီမှာ။ Component တွေထဲမှာ Higher Level Asynchronous သုံးမရတာပဲ။ နောက်ပြီးတော့ Data Fetching လို Side effect တွေကိုတိုက်ရိုက်သုံးမရတာပဲ။ ဒီလိုကောင်တွေကိုသုံးချင်ရင် useEffect() နဲ့သုံးရတယ်။ Manually သုံးပေးရတယ်။ ဒါမျိုးက Higher Level  Framework တွေဆိုရင် Framework Developer တွေကရှင်းပေးရမှာ။ Framework ကိုယ်တိုင်က Effect တွေကို ကြည့်ပြီး Handle ရမှာ။ ဒါကြောင့်ဒီလိုကိစ္စတွေကိုရှင်းဖို့ React Query လို၊ SWR လိုကောင်တွေကိုသုံးလို့ရတယ်။
+
+React Query က Server State ဖြစ်တဲ့ Fetching တွေနဲ့ Server State Management ကိုပါလုပ်လို့ရတယ်။ ဒါ့အပြင် Loading State, Fetching State လိုကောင်တွေပါပါတယ်။ အရင်ကဆို Redux နဲ့ Redux Thunk Middleware သုံးပြီးတော့ Asynchronous Effect တွေကိုသုံးရတယ်။ ဒါလည်းပဲ Config တွေပွလာတာပဲ။ React Query ကလုပ်ပေးတဲ့ Loading State လိုကောင်တွေကို Manually ရေးရတာပဲ။ အဲ့တော့ မလိုအပ်တဲ့ Code တွေ Replicated ဖြစ်တာပေါ့။
+
+ဒါ့ကြောင့် Application State နဲ့ Server State ကိုသပ်သပ်ထားပြီး Management လုပ်တာ Efficient အဖြစ်ဆုံးပဲ။ Client State ကို React Query လိုကောင်သုံးပြီးတော့ထိန်းချင်တောင်ရတယ်။ Redux သုံးလည်းရတယ်။ ဒါကတော့ Team နဲ့ညှိပေါ့။ Next SWR သုံးတာကောင်းတယ်။ အတွဲညီအောင်လို့။ ဒီကောင်တွေမှာကျန်တဲ့ Feature တွေဖြစ်တဲ့ Re Validation လို၊ Caching လိုကောင်တွေပါသုံးရတော့ DX ပိုကောင်းတယ်။
+
+Redux Toolkit မှာ RTK Query ပါပေမဲ့ Optional ဖြစ်တယ်။ သူက‌တော့မသုံးတာကောင်းတယ်။ ဘာလို့ဆို Redux ကလိုလာလို့။ Stand alone မဖြစ်ဘူး။ Redux ကို Server State အတွက် Management လုပ်ရင်အပေါ်ကလိုမျိုး Config တွေ Replicate ဖြစ်တာကြောင့်မို့လို့။ ဒါကြောင့်ဘာလို့ဘာကိုသုံးလဲဆိုတာသိမယ်လို့ထင်ပါတယ်။
