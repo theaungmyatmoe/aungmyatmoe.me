@@ -1,4 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @import "./prism.css";
 @tailwind utilities;
+
+
+@layer base {
+    pre, code, kbd, samp {
+        font-family: 'JetBrains Mono', Proxima Nova, system-ui, sans-serif;
+    }
+}
