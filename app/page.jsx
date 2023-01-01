@@ -207,9 +207,10 @@ export default async function Home() {
     }
 
 
+
     const articles = (await getAllArticles())
         .slice(0, 5)
-    
+
     return (
         <>
             <Container className="mt-9">
