@@ -1,0 +1,76 @@
+---
+title: 'JavaScript In Nutshell: Comma Operator, Strict Equal and Optional Chaining'
+description: >-
+  JavaScript မှာ Underrated ဖြစ်တဲ့ Language Feature ရှိပါတယ်။ သူက Comma
+  Operator လေးပါ။ သူ့ကို Sequentially Execute ချင်တဲ့အခါသုံးလို့ရပါတယ်။
+  ကျွန်တော်လည်းအရင်ကသတိမထားမိပါဘူး။ ခုမှမိုက်တယ်ဆိုတာသိရတာပါ။ 
+excerpt: >-
+  JavaScript မှာ Underrated ဖြစ်တဲ့ Language Feature ရှိပါတယ်။ သူက Comma
+  Operator လေးပါ။ သူ့ကို Sequentially Execute ချင်တဲ့အခါသုံးလို့ရပါတယ်။
+  ကျွန်တော်လည်းအရင်ကသတိမထားမိပါဘူး။ ခုမှမိုက်တယ်ဆိုတာသိရတာပါ။ 
+date: '2023-01-18T17:30:00.000Z'
+---
+
+JavaScript မှာ Underrated ဖြစ်တဲ့ Language Feature ရှိပါတယ်။ သူက Comma Operator လေးပါ။ သူ့ကို Sequentially Execute ချင်တဲ့အခါသုံးလို့ရပါတယ်။ ကျွန်တော်လည်းအရင်ကသတိမထားမိပါဘူး။ ခုမှမိုက်တယ်ဆိုတာသိရတာပါ။
+Usage ကဒီလိုလေးပါ။
+
+```javascript
+const a = () => 'a'
+const b = () => 'b'
+const c = true ? (a(), b()) : false //'b'
+```
+
+သူ့က Language Semantics အရ Left to Right Execute ပါတယ်။ ဒါ့ကြောင့် a() Call ပြီးတာနဲ့ b() ကိုအစဉ်လိုက် Call ပါတယ်။ ဒါ့ကြောင့် c ရဲ့ result က b() ရဲ့ Return Value ကိုပြန်ရမှာပါ။
+ဒီ Example ကိုကြည့်ပါ။
+
+```javascript
+const count = 10;
+const updateCount = () => count += 1
+console.log(
+updateCount(),
+updateCount()
+) // 11, 12
+```
+
+`updateCount()` နဲ့ count ရဲ့ value ကို update ချင်တာပါ။ Final Result ကိုလိုချင်တယ်ဆိုရင် Comma Operator သုံးပြီးတော့ယူလို့ရပါတယ်။
+
+# Strict Equal
+
+JavaScript မှာ Equality စစ်ဖို့အတွက် Operator နှစ်ခုရှိတယ်။ Double and Triple Equal ပေါ့။ Double Equal က Value ကိုပဲစစ်ပေမဲ့ Strict Equal ဖြစ်တဲ့ Triple Equal ကတော့ Explicit ဖြစ်အောင်လုပ်ပြီးတော့စစ်တယ်။
+Strict Equal က သူ့ရဲ့ Left and Right Operands တွေရဲ့ Value တွေကို Boolean အဖြစ် Coerce ပစ်တယ်။ Coerce တယ်ဆိုတာက Type Conversions ကိုပြောတာ။
+Empty String နဲ့ False နဲ့ ညီမညီစစ်ကြည့်တဲ့အခါ Strict Equal နဲ့တိုက်စစ်တာမို့လို့ Language ကမြင်တဲ့အခါမှာ Boolean အနေနဲ့ပြောင်းပစ်တယ်။
+
+```javascript
+console.log("" === false)
+```
+
+ဒီလိုမျိုးပေါ့။
+
+```javascript
+console.log( Boolean ("") === false) // true
+```
+
+Empty String ကဘာဖြစ်တယ်ညာဖြစ်တယ်ဆိုတာ Language Semantics အတိုင်းသွားပြီးတော့စစ်လိမ့်မယ်။ ဒါ့‌ ကြောင့် Safe ဖြစ်ချင်တဲ့ကိစ္စတွေမှန်သမျှကို Strict Equal သုံးမှအဆင်ပြေမှာပါ။
+Optional Changing
+JavaScript မှာ
+**Cannot read properties of undefined**
+ဆိုတဲ့ Error ရှိတယ်။ မြင်ပါများလို့အလွတ်တောင်ရတဲ့ Error Type ထဲပါတယ်။
+ဒီလိုပြဿနာမျိုးက NULL or Undefined ဖြစ်တဲ့အခါမှာဖြစ်လေ့ရှိပါတယ်။ Unsafe ဖြစ်တာမျိုးပါ။
+
+```javascript
+const user = {
+name : "Mg Mg"
+}
+console.log(user.age) // error
+```
+
+user Object မှာဆိုရင် age property ကမရှိဘူး။ ဒီတော့ Property မရှိတဲ့ပြဿနာတက်မယ်။ ဒီကောင်ကို Cover ဖြစ်ဖို့ဆိုရင် **Optional Chaining** ကိုသုံးလို့ရတယ်။
+
+```javascript
+const user = {
+name : "Mg Mg"
+}
+console.log(user?.age) // undefined
+```
+
+**Optional Chaining** နဲ့စစ်တဲ့အခါကြရင် ခုနက Error မဖြစ်တော့ဘဲနဲ့ Expression တစ်ခုလုံးက Undefined ဖြစ်သွားမှာ။ ဒီတော့ ကိုယ့်ဘာသာ Error Handling ရတာပိုလွယ်သွားတာပေါ့။
