@@ -6,33 +6,40 @@
     "start": "tinacms build && next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.4",
+    "@headlessui/react": "^1.7.7",
     "@mapbox/rehype-prism": "^0.8.0",
-    "@tinacms/cli": "^1.0.3",
-    "@vercel/analytics": "^0.1.6",
+    "@tinacms/cli": "^1.0.6",
+    "@vercel/analytics": "^0.1.8",
     "clsx": "^1.2.1",
-    "eslint-config-next": "^13.1.1",
+    "eslint-config-next": "^13.1.4",
     "fast-glob": "^3.2.12",
     "feed": "^4.2.2",
     "focus-visible": "^5.2.0",
     "gray-matter": "^4.0.3",
-    "next": "^13.1.1",
-    "next-mdx-remote": "^4.2.0",
+    "next": "^13.1.4",
+    "next-mdx-remote": "^4.3.0",
     "postcss-focus-visible": "^7.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark-gfm": "^3.0.1",
     "remark-rehype": "^10.1.0",
-    "tinacms": "^1.1.0"
+    "tinacms": "^1.1.3"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.8",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.11.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.1",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
     "typescript": "4.8.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "trim@<0.0.3": ">=0.0.3",
+      "got@<11.8.5": ">=11.8.5",
+      "underscore@>=1.3.2 <1.12.1": ">=1.12.1"
+    }
   }
 }
