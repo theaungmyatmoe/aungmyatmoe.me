@@ -1,0 +1,212 @@
+---
+title: Bootstrap vs. Tailwind CSS
+description: >-
+  Website တစ်ခုတည်ဆောက်တော့မယ်ဆိုရင် Web Page တွေလိုအပ်ပါတယ်။ ၎င်း Web page
+  တွေကိုလည်း Web Dev တွေအနေနဲ့အလှဆင်ဖို့လိုပါမယ်။ Web Development
+  ကိုလေ့လာတဲ့သူတိုင်းမသိမဖြစ်ဖြစ်တဲ့ HTML နဲ့ CSS ကိုအသုံးပြုပြီးအလှဆင်ကြပါတယ်။
+excerpt: >-
+  Website တစ်ခုတည်ဆောက်တော့မယ်ဆိုရင် Web Page တွေလိုအပ်ပါတယ်။ ၎င်း Web page
+  တွေကိုလည်း Web Dev တွေအနေနဲ့အလှဆင်ဖို့လိုပါမယ်။ Web Development
+  ကိုလေ့လာတဲ့သူတိုင်းမသိမဖြစ်ဖြစ်တဲ့ HTML နဲ့ CSS ကိုအသုံးပြုပြီးအလှဆင်ကြပါတယ်။
+date: '2023-11-27T17:30:00.000Z'
+---
+
+Website တစ်ခုတည်ဆောက်တော့မယ်ဆိုရင် Web Page တွေလိုအပ်ပါတယ်။ ၎င်း Web page တွေကိုလည်း Web Dev တွေအနေနဲ့အလှဆင်ဖို့လိုပါမယ်။
+Web Development ကိုလေ့လာတဲ့သူတိုင်းမသိမဖြစ်ဖြစ်တဲ့ HTML နဲ့ CSS ကိုအသုံးပြုပြီးအလှဆင်ကြပါတယ်။
+နောက်ကြတော့ Productivity ဖြစ်စေဖို့ရန် အသင့်သုံးလို့ ရတဲ့ CSS Framwork တွေကိုအသုံးပြုကြပါတယ်။ CSS Framwork တွေထဲမှာမှ လူသုံးအများဆုံးထြစ်တဲ့ Bootstrap နဲ့ ခုမှ Trend တာမကြာသေးတဲ့ Tailwind css တို့ရဲ့ Pros and Cons တွေကိုယှဉ်ပြမှာဖြစ်ပါတယ်။
+Twitter Bootstrap
+Bootstrap သည် CSS Framwork တွေထဲမှာ ထိပ်ဆုံးမှာရပ်တည်နေပြီးတော့လူသုံးအများဆုံး Framwork ဖြစ်ပါတယ်။ သူ့ရဲ့ methodology က OOCSS ( Object Oriented CSS) ဖြစ်ပါတယ်။ OOCSS ကိုအောက်ပါအတိုင်းApply လုပ်ပါတယ်။
+What is CSS Object?
+CSS object ဆိုတာအခြေခံအားဖြင့် Visual patterns တွေ repeat တဲ့ pattern‌‌ေတွဖြစ်ပါတယ်။ ၎င်း patterns တွေသည် independent html,css,Js snippet တွေကို abstract လုပ်နိုင်ပါတယ်။ ၎င်းကို CSS Object လို့ခေါ်ပြီးတော့ သူတို့က Reusable ဖြစ်ပြီးတော့ Site တစ်ခုလုံးမှာသုံးနိုင်ပါတယ်။
+OOCSS မှာ Main Principle နှစ်ခုရှိတယ်။
+1.Separate structure and skin
+Border, background တွေကို skin အဖြစ်ခွဲခြားလိုက်ပြီးတော့ ၎င်း skin က ‌တစ်ခြား Object တွေမှာလည်း ပြန်ပြီးတော့ သုံးနိုင်ပါတယ်။
+ဉပမာ
+
+```css
+#button {
+width: 200px;
+height: 50px;
+padding: 10px;
+border: solid 1px #ccc;
+background: linear-gradient(#ccc, #222);
+box-shadow: rgba(0, 0, 0, .5) 2px 2px 5px;
+}
+#box {
+width: 400px;
+overflow: hidden;
+border: solid 1px #ccc;
+background: linear-gradient(#ccc, #222);
+box-shadow: rgba(0, 0, 0, .5) 2px 2px 5px;
+}
+#widget {
+width: 500px;
+min-height: 200px;
+overflow: auto;
+border: solid 1px #ccc;
+background: linear-gradient(#ccc, #222);
+box-shadow: rgba(0, 0, 0, .5) 2px 2px 5px;
+}
+```
+
+ခု example မှာဆိုရင် background တွေwidth တွေ box shadow ကထပ်ခါထပ်ခါရေးထားရတယ်။ ပြီးတော့ id နဲ့ပဲ select ထားတဲ့အတွက် နောက် တစ်ခါထပ်ပြီး override လုပ်ခွင့်မရှိဘူး ဒီ့အတွက် Principle 1 သုံးပြီးတော့ Skin နဲ့wigetတွေကိုခွဲထုတ်လိုက်ပါတယ်။
+
+```css
+.button {
+width: 200px;
+height: 50px;
+}
+.box {
+width: 400px;
+overflow: hidden;
+}
+.widget {
+width: 500px;
+min-height: 200px;
+overflow: auto;
+}
+.skin {
+border: solid 1px #ccc;
+background: linear-gradient(#ccc, #222);
+box-shadow: rgba(0, 0, 0, .5) 2px 2px 5px;
+}
+```
+
+တစ်ခုဆီခွဲထုတ်လိုက်တဲ့အပြင် class အဖြသ်သတ်မီတ်ပေးထားတဲ့အတွက် override ပြန်လုပ်ခွင့်ရှိပါတယ်။
+example of override:
+
+```
+id="unique override" (Wrong)
+class="btn btn-primary" (Override)
+```
+
+Class မှာတော့ override လိုရမှာဖြစ်လို့ class အဖြစ်ထားတာဖြစ်တယ်။ OOCSS ကတော့ class ပဲသုံးရမယ်လို့မပြောထားဘူး။ သို့သော် class နဲ့သာသင့်လျော်လို့class ကိုသုံးရခြင်းဖြစ်တယ်။
+
+## 2.Separate container and content
+
+Container block တွေနဲ့. Content တွေကိုသပ်သပ်ခွဲထားကမှာဖြစ်တယ်။
+
+```css
+#footer h3 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.5em;
+line-height: 1;
+color: #777;
+text-shadow: rgba(0, 0, 0, .3) 2px 2px 4px;
+}
+```
+
+အထက်ပါ ဥပမာမှာဆိုရင် footer ထဲမှာရှိတဲ့. h3 tag ကို style တွေ apply ထားတာကိုတွေ့ရမှာပါ။ Descending လုပ်ထားတဲ့အတွက် individual tag တွေပဲသုံးလို့ရမှာဖြစ်တဲ့အတွက် reusable မဖုသ်ပါဘူး။ ဒီ့အတွက်အောက်ပါအတိုင်းအသုံးပြရပါတယ်။
+
+```css
+.w-100{
+width:100%;
+position:relative;
+overflow:hidden;
+}
+.h3{
+font-size:150% ;
+/* This font size should declared at body selector  */
+font-weight:300;
+}
+```
+
+ခုလိုပြန်ကြေညာလိုက်ရင် h3 class ကိုဘယ်နေရာမှာသုံးသုံးအဆင်ပြေမှာဖြစ်သလို w-100 class ကလည်းနေရာတစ်ကာမှခေါ်သုံးလို့ရမှာဖြစ်တယ်။
+Bootstrap example:
+
+```html
+<footer class="w-100">
+<h1 class="display-1">Hello From OCSS</h1>
+</footer>
+```
+
+ခု OOCSS ကိုအနည်းငယ်ဖော်ပြရခြင်းမှာ နှိုင်းယှဉ်တဲ့အခါပိုပြီးလွယ်ကူစွာနားလာ်ဖို့ဖြစ်တယ်။
+OOCSS အရ Bootstrap ကိုဖွဲ့စည်းတည်တောက်ထားတာဖြစ်တယ်။ ဒီ့အတွက်
+
+```html
+<button class="btn btn-primary">Btn</button>
+```
+
+ဆိုပြီးတော့အလွယ်သုံးနိုင်တာဖြစ်တယ်။
+Tailwind css သည် utility css ဖြစ်တဲ့အတွက် ကျွန်တော်တို့ ဘာသာcss အတွက် class name တွေခေါင်းစားခံပြီးရေးစရာမလိုတော့ဘူး။ သူတို့ရေးပြီးသားကိုပဲပြန်ပြီးတော့ ပြင်သုံးလို့ရမယ်လို့ပြောထားတယ်။ \[ Ref Link: https://tailwindcss.com/ https://tailwindcss.com/docs/utility-first ]
+ကျွန်တော်တို့က stylesheet ကိုကိုယ့်ဘာသာရေးစရာမလိုတော့ဘူး။ သို့သော် utility class တွေဖြစ်တဲ့အတွက် သူတို့ရဲ့class ကို ထပ်ခါထပ်ခါ repeat လုပ်သုံးနေရမှာပါပဲ။
+example:
+
+```html
+<button class="bg-green-400 p-1">Tailwind Button</button>
+```
+
+Background class နဲ့ padding class ကိုနောက် button ရေးရင်လည်းထပ်သုံးရမှာပါပဲ။ Stylesheet။ မရေးပေမဲ့ class name တွေကိုတော့ပြန်ရေးရတာဖြစ်တယ်။
+
+## Pros and Cons
+
+Bootstrap
+
+Pros:
+အသုံးပြုရလွယ်ကူ မြန်ဆန်တယ် CDN link နဲ့တန်းချိတ်သုံးလို့ရတယ်။
+Sass or Less နဲ့ Modified လို့ရတယ်
+Special Components တွေအသင့်သုံးလို့ရတယ် (eg.Modal, Collapse Box)
+Community strong ဖြစ်တယ်
+Greate Grid System
+Cons:
+components တွေကိုအစီတကျသတ်မှတ်ထားသလိုရေးမှရမယ်။
+File Size အနည်းငယ်ကြီးတယ် Js plugin ပါလို့။ (At BS5 jQuery removed)
+Customize ဖို့ Features နည်းတယ်။
+Site တွေရဲ့ Visual ဆင်တူနေမယ်။
+Tailwind:
+Pros:
+File Size သေးတယ်။ (CSS ပဲပါတာမို့လို့ပါ။)
+Customize နိုင်တယ်။
+ကိုယ်ပိုင် Framwork တစ်ခုပြန်ရေးနိုင်တယ်။
+Custom Components တွေပြန် Compile ပေးတဲ့ Feature ရှိတယ်။ ( I love this one👀)
+Cons:
+1.Normal Case ကအစ Plug-in ထည့်နေရတယ်။ (suck) eg.heading tag တွေအကုန်ညီနေတာမျိုး။ 2.ကိုယ်ပိုင် Grid System မပါ။ 3. Productivity မဖြစ်။ ( Components တွေကိုယ့်ဘာသာတည်‌‌ေဆာက်ထားမှရပါမယ်။ မတည်ဆောက်ခင်အခြေအနေကိုယှဉ်ပြထားတာဖြစ်ပါတယ်။) 4. CDN ချိတ်လို့ရသော်လည်း CDN နဲ့သာ Class တွေခေါ်သုံးနေရရင်အချိန်ကုန်တယ်။ (suck) 5. Special Components တွေမပါ။ (eg.modal)
+Code Example
+Bootstrap-5
+
+```html
+<button class="btn btn-outline-primary">Bootstrap</button>
+```
+
+Button ကောင်းကောင်းတစ်ခုကိုအလျင်အမြန်တည်ဆောက်ပြီးပါပြီ။ထို့ပြင် Hover feature တွေလည်းပါပြီးသားဖြစ်တယ်။
+
+## Tailwind CSS
+
+```html
+<button class="bg-green-400 p-1 focus:ring-2 focus:bg-green-600 focus:ring-green-600 focus:ring-opacity-50 focus:outline-none focus:ring-offset-2 rounded text-white font-serif font-bold float-right clear-both mb-2">
+Tailwind Button
+</button>
+```
+
+Hover effect ပါပါအောင် တော်တော်လေးရေးရပါတယ်။ ခုလိုမရေးချင်ရင် Component အဖြစ်ပြန် apply ပေးလို့ရပါတယ်။
+(CDN မှာတော့မရပါဘူး။)
+
+```css
+//tailwind.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn{
+@apply bg-green-400 p-1 focus:ring-2 focus:bg-green-600 focus:ring-green-600 focus:ring-opacity-50 focus:outline-none focus:ring-offset-2 rounded text-white font-serif font-bold float-right clear-both mb-2;
+}
+```
+
+အထက်ပါ Code ကို Build ပေးတဲ့အခါ
+
+```html
+<button class="btn">Tailwind</button>
+လို့ခေါ်သုံးလို့ရမယ်။ ဒါလေးတော့ကောင်းတာပေါ့။ သို့သော် တကယ့် Project ကြီးရေးတော့မယ်ဆိုရင် မိမိဘာသာရေးထားတဲ့ Components တွေကိုပါရေးထားမှအသုံးပြုနိုင်မှာဖြစ်တယ်။
+Summary
+Bootstrap ကမြန်မြန်ဆန်ဆန်သုံးလို့ရတယ်။ Website တစ်ခုအသာလေးရေးနိုင်တယ်။သပ်ရပ်တယ်။
+Tailwind ကြတော့ Class name တွေရေးရမယ်ထပ်ခါထပ်ခါ။ ( မရေးချင်ရင်အစကတည်းက Components တွေရေးထား ၊သူများဟာသုံးချင်ရင်လည်းသုံးပေါ့ 2017 ကတည်းကဆိုတော့ရှိပါတယ်ရှာကြည့်ပါ။) Tailwind ရှိတော့ကိုယ့်ဘာသာ CSS stylesheet မရေးရတော့ပဲ Tailwind သုံးပြီး ရေးထားလို့ရတယ်။ CSS ကိုကျွမ်းထားဖို့တော့လိုမယ်။ Framwork ဖြစ်ပေမဲ့အသင့်သုံးမရပါဘူး။
+My Opinion
+Bootstrap ခူးပြီးခပ်ပြီးသားထမင်းပွဲနဲ့တူတယ်။
+Tailwind ရတ်ပြီးသားစပါးပင်အဆင့်ပဲရှိတယ်။ ကိုယ့်ဘာသာ ပြုပြင်ပြောင်းလည်းပေးမှသာ ‌ကောင်းမွန်တဲ့ ဆန်ကောင်းသို့မဟုတ် စကွဲတွေထွက်မှာဖြစ်တယ်။
+Productivity
+Bootstrap သုံးပြီးခဏအတွင်း‌ Web Page တစ်ခုရမယ်။
+Tailwind ကိုယ့်ဘာသာ Components တွေရေးထားတာရှရင်တော့ရမယ်။ မဟုတ်ရင်တော့ မရပါဘူး။ကိုယ့်ဘုသာရေးထားတဲ့CSSလိုပဲအချိန်ကြာပါမယ်။ (အဲ့တော့ Components တွေကြိုရေး‌ထားပေါ့။မရေးချင်ရင်ဝယ်သုံး။ <`- I don't do that👀)
+ဘယ်ဟာသုံးသင့်တယ်ဆိုရင် Bootstrap ပဲကျွန်တော်က Prefer ဖြစ်တယ်။ Tailwind ကိုတော့ ကိုယ့် ရဲ့Personal site ရေးမှပဲသုံးဖြစ်မှာပါ။အချိန်ကြာလို့။
+ကိုယ့် taste နဲ့ကိုယ်ဆိုပေမဲ့ Tailwind လည်းစမ်းသုံးကြည့်ပါ။ ဘယ်ဟာက ပိုလွယ်လဲတွေ့လာရပါမယ်။
+ခုခေတ်မှာက Content is king မဟုတ်တော့ပါဘူး။ Speed is king ဖြစ်ပါတယ်။ကိုယ်ကြိုက်တာကို‌သုံးနိုင်ပါတယ်။နောက် Article မှာထပ်တွေ့ပါမယ်။
+
+```
