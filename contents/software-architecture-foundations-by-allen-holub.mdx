@@ -1,0 +1,127 @@
+---
+title: Software Architecture Foundations by Allen Holub
+description: Software Architecture Foundations by Allen Holub
+excerpt: Software Architecture Foundations by Allen Holub
+date: '2023-05-02T17:30:00.000Z'
+---
+
+0\*\*. Intro\*\*
+
+* design the complete system
+* see the big picture
+* start from user problem (story) instead of implementation
+* just say fuck UML
+
+1\*\*. The Software Architect\*\*
+
+* inspect and adapt loop
+* leverage what you learn something to the real world
+* Agile architect is Servant Leader (teaching, coaching, coordinating)
+* review work → make suggestions → help refine processes
+* architect don’t involve how to solve the problem instead let them pick the suggestions their own way
+* agile is no more valuable when it is not working
+* dot vote on sticky note
+* collaborate with others teams such as UX, Development, Database Admin and so on,
+
+Good Architecture
+
+* Simplicity, Maintainability, Testability
+* Design Patterns, they address small amount of problems
+* Improve technical understanding
+
+2\. Thinking Architecturally
+
+* Conway’s law: change the structure of the organization to match agile methods
+* understand the user story
+* build user story with cross functional teams
+* N Tier: UI, Business Analyst, Database
+* change code to agile way to move fast
+* Incremental vs. up-front design
+  * build a piece of user story
+    * BUFD (big up-front design) → db → business logic → UI
+    * agile: customer → user story → tech
+* Bottom up vs. Top Down
+  * DDD: module reflects the business
+  * Ubiquitous Language in DDD: Speak the language of your customers.
+    * The same word can mean different things under different contexts. This is okay.
+* The role of the domain (bounded contexts)
+  * avoid vendor specific ecosystem (ex: bank)
+
+3\. A Design Process: A Brief Introduction
+
+Requirements gathering: Problem statements and user stories
+
+* describe problem
+* describe solution
+* need to understand what the user goals are
+* user story does not describe a computer program
+* smaller story is better → sticky note work better
+* once we create a story we will need to refine them
+
+1. Narrowing: Vertical vs. horizontal splitting
+
+* horizontal slicing: user story → db + ui + logic
+* vertical slicing: narrow the scope as much as we can, we can use FlowChart
+* narrow the path
+
+1. Identifying bounded contexts and entities
+
+* event storming in DDD: how the agents talk each other (the group of this context is called entity)
+* domain analyst
+* agent becomes domain
+* it’s called event map
+* Entities are the bounded context in agents, where an agent does contextual work linked to a respective event and action.
+
+5\. Enterprise Architecture (EA)
+
+* The organization logic for business process and IT infrastructure reflecting the integration and standardization requirements of company ‘s operation modal - MIT CFIS Research
+* describe the structure of business
+* describe how things works (processes)
+  * how things work within departments
+  * how people communicate
+* standardization every fucking things lead to more complexity
+* must use appropriate tools and strategy
+* know design patterns ( just design from software engineer)
+  * define by purpose not by structure
+
+6\. Broad Architectural Pattern
+
+* Monolithic (big large execution model)
+  * evil shortcut is impossible
+  * time for deployment
+  * homogeneous problem
+  * Well structured architecture →
+    * N-Tier (horizontal) : UI, DB, Logic
+    * vertical: layer with bounded context which connect with horizontal layer
+  * Monolithic → internal inefficiency
+* Microkernel (plugin) architecture
+  * user interact → plugin → kernel → services (like linux)
+  * implement via message base or http interface (via network)
+    * a plugin don’t know what other plugin work
+    * isolation prevent big-ball-of-mud deps
+    * plugin are small and easy to write, debug and maintain
+    * cons: APIs to the kernel are delicate
+    * cons: new APIs require rewriting plugin
+    * cons: kernel can brake the whole system
+    * cons: plugins are indirectly coupled to the kernel
+* Message queue
+  * pub/sub model
+* micro services
+  * independent monolithic
+  * distributed
+  * related to bounded context
+    * two approach of micro services
+      1. use REST like architecture (message with post)
+      2. messaging post from messaging arch)
+      3. cons: design and runtime complexity
+      4. cons: network are slow compared to other alternative
+      5. RESOURCE: building Microservices.: design fine grained system by sam newsman
+* Reactive and choreographed systems
+  * declarative system
+  * synchronous service (declartive) send one by one methods (Why can a reactive system be so much faster than a synchronous declarative system?)
+    * shopping service → sentEmail(), sendBla() → take 200s latency
+  * reactive reuduce latency: brocast events to do something(
+  * It will broadcast out to the entire system that something needs to be done.
+  * RESOURCE: holub on patterns: learning design patterns by looking at code
+  * read code and go out build stuffs
+  * learn new things all the time, it’s not the subject that will be boring
