@@ -35,6 +35,10 @@ const darkModeToggleScript = `
     updateMode()
   }
 `
+
+
+
+
 export default async function Head() {
     return (
         <>

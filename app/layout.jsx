@@ -3,6 +3,11 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {AnalyticsWrapper} from "@/components/AnalyticsWrapper";
 
+export const metadata = {
+    title: 'Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast',
+  };
+ 
+
 export default async function RootLayout({children}) {
     return (
         <>
