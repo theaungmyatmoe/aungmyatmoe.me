@@ -1,0 +1,76 @@
+---
+title: The Four Pillars of Object Oriented Programming
+description: >-
+  SOLID ကိုစမလေ့လာခင် Abstraction, Encapsulation, Inheritance, Polymorphism
+  ဆိုတဲ့ Object Oriented ရဲ့ ထောက်တိုင်တွေကိုအရင်သိထားဖို့လိုပါတယ်။ Four Pillars
+  လို့‌ ခေါ်ပါတယ်။
+excerpt: >-
+  SOLID ကိုစမလေ့လာခင် Abstraction, Encapsulation, Inheritance, Polymorphism
+  ဆိုတဲ့ Object Oriented ရဲ့ ထောက်တိုင်တွေကိုအရင်သိထားဖို့လိုပါတယ်။ Four Pillars
+  လို့‌ ခေါ်ပါတယ်။
+date: 2023-08-08T17:30:00.000Z
+---
+
+SOLID က Object Oriented Programming Paradigm သုံးတဲ့အခါမှာဘယ်လိုဘယ်ပုံရေးသင့်တယ်၊ ဘယ်လိုတွေးသင့်တယ်ဆိုတာမျိုးကိုလမ်းကြောင်းပေးတဲ့ Principle ဖြစ်ပါတယ်။ သူက အတင်းအကြပ်ကြီးလိုက်နာရမယ်လို့ပြောထားတာမျိုးမဟုတ်ဘဲနဲ့ Guidelines သဘောမျိုးပေးထားတဲ့ Principle လို့နားလည်ထားလို့ရပါတယ်။
+
+SOLID ကိုစမလေ့လာခင် Abstraction, Encapsulation, Inheritance, Polymorphism ဆိုတဲ့ Object Oriented ရဲ့ ထောက်တိုင်တွေကိုအရင်သိထားဖို့လိုပါတယ်။ Four Pillars လို့‌ ခေါ်ပါတယ်။
+
+## Abstraction
+
+OOP နဲ့ Data Modeling လုပ်တဲ့အခါ၊ ဒါမှမဟုတ် Class တွေတည်ဆောက်တဲ့အခါမှာ Real World မှာရှိတဲ့ Object ကိုပြန်ပြီး OOP နဲ့ Modeling လုပ်ကြပါတယ်။ ဆိုပါစို့ကားတစ်စီးကို Class အဖြစ်ပြောင်းမယ်ဆိုရင်၊ ကားတစ်ခုလုံးမှာပါတဲ့ Implementation Detail တွေဖြစ်တဲ့ ကားရဲ့ဘယ် Engine ကိုဘယ်ဝိုင်ယာနဲ့ဆက်ထားတယ်၊ အင်ဂျင်ကိုစနှိုးဖို့ ဘာတွေလုပ်ရမယ်စတဲ့ကိစ္စတွေကိုအသေးစိတ်လိုက်ပြီးတော့သိထားတာမျိုးမဟုတ်ဘဲနဲ့ ကားရဲ့အသုံးဝင်ဝဲ့အပိုင်းဖြစ်တဲ့ Business Domain ကိုပဲယူပြီးတော့ Modeling လုပ်ကြပါတယ်။
+ဥပမာ YBS ဆိုရင် ခရီးသည် တင်ဖို့ဖြစ်ပါတယ်။ ဒါ့ကြောင့် ဒီကားပေါ်မှာ အရေးအကြီးဆုံးကိစ္စက ထိုင်ခုံတွေဖြစ်ပါတယ်။ ထိုင်ခုံတွေရဲ့ Count ကိုသိထားရင်ရပါပြီ။ ဒီလိုမျိုး Modeling လုပ်တဲ့တွေးခေါ်မှုမျိုးကို Abstraction လို့ခေါ်ပါတယ်။
+ဒီနေရာမှာတစ်ခုသတိချပ်ရမှာက ကိုယ့်ရဲ့ Modeling လုပ်တဲ့ပုံစံက Specific Context ပေါ်မူတည်ပြီးလုပ်ရတယ်ဆိုတာကိုပါ။
+Specific Context ဆိုတာက ကိုယ်ရဲ့ Business Software က Engine Power ကိုသိဖို့လိုတာလား၊ Seat Count ကိုသိဖို့လိုတာလားဆိုတာမျိုးပါ။ တိကျသေချာတဲ့ Boundary တွေသိထားမှ Modeling လုပ်ရတာမှာပိုပြီးထိရောက်မှာဖြစ်ပါတယ်။
+
+## Encapsulation
+
+Encapsulation က Lower Level Implementation တွေကို Hide ထားတဲ့ကိစ္စမျိုးတွေကိုလုပ်ဖို့ Push လုပ်ထားတာပါ။ ကားမောင်းတတ်ဖို့က ကားဘယ်လိုအလုပ်လဲဆိုတာကိုအသေးစိတ်သိစရာမလိုဘဲနဲ့ ကားပေါ်မှာထိုင်ပြီးစီယာတိုင်လေးကိုင်ပြီးဘယ်လိုမောင်းရမယ်၊ ဘယ်လိုဘရိတ်နင်းရမယ် စတဲ့ကိစ္စတွေပဲသိဖို့လိုပြီးတော့ ဘရိတ်နင်းလိုက်တာနဲ့ဘယ် Hydronic Pressure ကဘယ်လိုလုပ်သွားတယ်ဆိုတာမျိုးကိုသိဖို့မလိုတာမျိုးကိုပြောတာပါ။
+Bus ကားမောင်းမယ်ဆိုရင် အဓိကလုပ်ရမှာက Bus Stop တစ်ခုကနေ တစ်ခုကိုရောက်အောင်ပို့ဖို့ပဲဖြစ်တယ်။ ဒီလိုနေရာမှာ ကားမောင်းတဲ့ Process ကို Hide ထားရမှာဖြစ်တယ်။ Public အနေနဲ့ဘယ်သူမှမလိုအပ်တာကြောင့်ဖြစ်တယ်။ Class Method အနေနဲ့ဆိုရင် origin method တစ်ခုရှိမယ်၊ ဘယ်ကနေဘယ်ကိုသွားမယ်ဆိုတာမျိုးပဲပါမယ်။ ဒီလိုမျိုးပါ။
+
+```ts
+class Bus {
+    origin(from, to){}
+}
+```
+
+## Inheritance
+
+အမွေဆက်ခံတယ်ဆိုတဲ့အတိုင်းပဲ Existing Class ကနေ Reuse လို့ရတဲ့ Child Class တွေဆောက်တာဖြစ်ပါတယ်။ ဥပမာ Animal Class မှာ Run Method ရှိမယ်။ သူက Animal တိုင်းမှာပါနေတာကြောင့် Inherit လုပ်လို့ရတယ်။ ဘယလို့ဆိုရင်အပေါ်က Behavior ကပြန်ပါလာမှာဖြစ်တာကြောင့် Reuse လို့ရသွားလို့ဖြစ်ပါတယ်။
+
+```ts
+ class Animal {
+     run(){}
+ }
+
+class Cat extends Animal {}
+```
+
+ဒီနေရာမှာသတိထားရမှာက Class State နဲ့ Behavior တွေရဲ့ Security ပါ။ Parent မှာ Public ပေးထားရင်ကျန်တဲ့ Child က Inherited ဖြစ်သွားမှာပါ။
+
+## Polymorphism
+
+Polymorphic ဖြစ်တယ်ဆိုတာက Shape တစ်ခုအနေနဲ့ Pretend တာမျိုးပါ။ ဥပမာ Animal Class မှာ makeSound Behavior လုပ်နိုင်တယ်ဆိုပါစို့။ သူ့ကို extends ထားတဲ့ကောင်တွေဖြစ်တဲ့ Cat ဆိုရင်လည်း Animal လိုမျိုး Behavior ကို behave နိုင်တယ်ဆိုပြီး Pretend တာမျိုးပါ။
+
+```ts
+abstract class Animal {
+     makeSound();
+ }
+class Cat extends Animal {
+    makeSound(){
+    print ("Meow")
+    }
+}
+class Dog extends Animal {
+    makeSound(){
+    print ("Woff")
+    }
+}
+animals = [new Cat, new Dog]
+foreach(Animal animal: animals)
+{
+    animal.makeSound()
+}
+```
+
+Polymorphic ဖြစ်မဖြစ်ကိုတော့ Runtime မှာသိနိုင်ပါတယ်။ OO Programming Language တော်တော်များများမှာလည်း Support ပေးပါတယ်။
+Program က Concrete Type ကိုမသိဘဲနဲ့ Runtime မှာသာ သိနိုင်တာမျိုးပါ။ အလွယ်အနေနဲ့ On The Fly မှာ ပုံပြောင်းတယ်လို့မှတ်ထားနိုင်ပါတယ်။
