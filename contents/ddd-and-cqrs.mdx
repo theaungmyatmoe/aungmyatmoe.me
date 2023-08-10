@@ -1,0 +1,33 @@
+---
+title: DDD and CQRS
+description: >-
+  Domains Driven ဆိုတာက Modeling Technique လို့ပြောလို့ရတယ်။ Data တွေကိုဘယ်လို
+  Modeling လုပ်မလဲပေါ့။ DDD ကိုသုံးတဲ့အခါမှာ Bounded Contexts
+  တွေကိုသိဖို့လိုတယ်။ Sub Domain တွေပေါ့ သူတို့က။ ဆိုပါစို့ E Commerce Website
+  တစ်ခုလုပ်တယ်ဆိုရင် သူက Problem ဖြစ်တယ်။ ပြဿနာဆိုတာက DDD မှာ Business Domain
+  ပဲဖြစ်တယ်။ ဒီတော့ဒီပြဿနာကိုဘယ်လိုရှင်းမလဲ။ 
+excerpt: >-
+  Domains Driven ဆိုတာက Modeling Technique လို့ပြောလို့ရတယ်။ Data တွေကိုဘယ်လို
+  Modeling လုပ်မလဲပေါ့။ DDD ကိုသုံးတဲ့အခါမှာ Bounded Contexts
+  တွေကိုသိဖို့လိုတယ်။ Sub Domain တွေပေါ့ သူတို့က။ ဆိုပါစို့ E Commerce Website
+  တစ်ခုလုပ်တယ်ဆိုရင် သူက Problem ဖြစ်တယ်။ ပြဿနာဆိုတာက DDD မှာ Business Domain
+  ပဲဖြစ်တယ်။ ဒီတော့ဒီပြဿနာကိုဘယ်လိုရှင်းမလဲ။ 
+date: 2023-07-29T17:30:00.000Z
+---
+
+Domains Driven ဆိုတာက Modeling Technique လို့ပြောလို့ရတယ်။ Data တွေကိုဘယ်လို Modeling လုပ်မလဲပေါ့။ DDD ကိုသုံးတဲ့အခါမှာ Bounded Contexts တွေကိုသိဖို့လိုတယ်။ Sub Domain တွေပေါ့ သူတို့က။ ဆိုပါစို့ E Commerce Website တစ်ခုလုပ်တယ်ဆိုရင် သူက Problem ဖြစ်တယ်။ ပြဿနာဆိုတာက DDD မှာ Business Domain ပဲဖြစ်တယ်။ ဒီတော့ဒီပြဿနာကိုဘယ်လိုရှင်းမလဲ။
+
+Business Domain ကိုရှင်းဖို့အတွက် Sub Domain တွေပေါ်လာရတယ်။ Sub Domain တစ်ခုစီကိုတော့ Context လို့ခေါ်တယ်။ Sub Domain ဆိုတာက ပြဿနာကြီးတစ်ခုရဲ့ Feature လေးတွေကိုပြောတာလို့ယူဆလို့ရတယ်။ ဆိုပါစို့ Add To Cart, Orders စသည်ဖြင့်။ သူတို့ E commerce ရဲ့ Sub Domain တွေဖြစ်ဝာယ်။ Domain တစ်ခုဆီမှာ Context ရှိတယ်။ ဒီ Context မှာလည်း Boundary ရှိတယ်။ ဘယ်လိုခွဲခြားပြီးတော့စဉ်းစားရမလဲပေါ့။
+
+Boundary ပါတဲ့ Contexts တွေကို Bounded Context လို့ခေါ်တယ်။ ဒီပြဿနာကိုဒါတွေနဲ့ချိတ်ပြီးရှင်းလို့ရတယ်ဆိုတာမျိုးပေါ့။ Bounded Context တွေက Microservices မှာအရေးပါတယ်။ ဘာလို့အရေးပါလဲဆိုရင် Service တစ်ခုဆီရဲ့ Context ကိုသူကသတ်မှတ်ပေးနိုင်တာမို့လို့လို့ပြောလို့ရတယ်။
+
+Context ဆိုတာက ဒီ Domain ပါတဲ့ Availability တွေဖြစ်တယ်။ Add To Cart Domain က Cart ထဲကို Add တဲ့ Feature တွေပါရမယ်။ Database မှာဆိုရင်လည်း Product ID, Product Quantity စတာပဲပါရမယ်၊ ကျန်တာတွေပါလို့မရဘူး။ ဒီလိုမျိုး သတ်မှတ်ထားတဲ့ ကောင်တွေကို Bounded Context လို့ခေါ်တယ်။
+
+DDD ကိုသုံးတဲ့အခါမှာ CQRS ( Command Query Responsibility Segregation ) ကပါလာမှာပဲဖြစ်တယ်။ CQRS ဆိုတာက Application Level CQS (Command Query Separation) လုပ်တာကိုပြောတာ။ Monolithic DDD ကိုသုံးတဲ့အခါမှာ CRUD Operation တွေကို တပြုံတခေါင်းကြီးသုံးကြတယ်ပေါ့။ ဒီတော့ Service ရဲ့ Complexity မြင့်လာသလို Microservices ရဲ့အနှစ်ဖြစ်တဲ့ Independently Scalable ဖြစ်နိုင်စွမ်းကိုထိခိုက်တယ်။ ဒီတော့ CRUD ကိုအပိုင်းခွဲပစ်လိုတယ်၊ CQS အနေနဲ့။
+
+CQS က Command တွေက Creat/Update/Delete Operation တွေမှာအကြုံးဝင်တယ်။ API တစ်ခုကို Endpoint တစ်ခုအနေနဲ့သွားတဲ့ပုံစံမျိုးမြင်ကြည့်လို့ရတယ်။ Write Operation တွေအတွက် API တစ်ခုစီထုတ်ပေးထားတယ်လို့မြင်လို့ရတယ်။
+
+Query တွေက Read Operation တွေမှာသုံးဖို့လုပ်ထားတာ။ Read API ထုတ်ထားတယ်ပေါ့။ ဒီတော့လွတ်လွတ်လပ်လပ်ကြိုက်သလောက် Read လုပ်လို့ရတယ်။ ဘာကိုဆိုလိုတာလဲဆိုရင် CRUD မှာတုန်းက Code Level Coupling ဖြစ်နေတော့ Operation တွေကစုပြုံနေတယ်။ Database တစ်ခုထဲကိုပဲစုပြုံနေတာမျိုး။ ဒါပေမဲ့ Read Operation အတွက် ထပ်ထုတ်လိုက်တဲ့အခါမှာ Database တွေကိုခွဲပြီးသုံးလို့ရတယ်။ Master Database, Slave Database ဆိုပြီးတော့ ခွဲလိုက်ရင် Slave တွေက Replicate ထားတဲ့ကောင်တွေဖြစ်ကြောင့် Write စရာမရှိတော့ဘူး။ ဒီတော့ Read Operation ကို Performance ကောင်းကောင်းနဲ့လုပ်လို့ရတယ်။ User အတွက် Read Database တစ်ခု၊ Admin အတွက် Read Database တစ်ခုထုတ်ပေးထားရင် Consistency and Availability ပါပိုမြင့်သွားမှာဖြစ်တယ်။ Admin က Excel ဖိုင်ထုတ်နေလို့ User Database မှာသွားပိတ်မနေတော့ဘူးပေါ့။ Read Operation မှာ။
+
+Separation ကတော့အပေါ်က Command နဲ့ Query ခွဲတာအတွက်ထည့်ထားတာပါ။ CQRS က Segregation နဲ့တူတူပါပဲ။
+DDD and CQRS ကိုသုံးချင်ရင်အလွယ်ဆုံးက Spring Boot ပါ။ လွယ်တယ်ဆိုတာကသုံးလို့ကောင်းတယ်ဆိုတာမျိုးပါ။ နောက်ပြီးရင် Nest JS CQRS ကိုသုံးလို့ရတယ်။ Domain Modeling ကတော့ကိုယ့်ဟာကိုယ်လုပ်ရမှာပေါ့။
