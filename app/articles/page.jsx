@@ -1,9 +1,9 @@
-import {Card} from '@/components/Card'
-import {SimpleLayout} from '@/components/SimpleLayout'
-import {formatDate} from '@/lib/formatDate'
-import {getAllArticles} from "@/lib/api";
+import { Card } from '@/components/Card';
+import { SimpleLayout } from '@/components/SimpleLayout';
+import { formatDate } from '@/lib/formatDate';
+import { getAllArticles } from '@/lib/api';
 
-function Article({article}) {
+function Article({ article }) {
     return (
         <article className="md:grid md:grid-cols-4 md:items-baseline">
             <Card className="md:col-span-3">
@@ -29,12 +29,11 @@ function Article({article}) {
                 {formatDate(article.meta.date)}
             </Card.Eyebrow>
         </article>
-    )
+    );
 }
 
 export default async function ArticlePage() {
-
-    const articles = await getAllArticles()
+    const articles = await getAllArticles();
 
     return (
         <SimpleLayout
@@ -43,12 +42,16 @@ export default async function ArticlePage() {
         >
             <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
                 <div className="flex max-w-3xl flex-col space-y-16">
-                    {articles.map(article => {
-                        return <Article article={article} key={article.meta.slug}/>
+                    {articles.map((article) => {
+                        return (
+                            <Article
+                                article={article}
+                                key={article.meta.slug}
+                            />
+                        );
                     })}
                 </div>
             </div>
         </SimpleLayout>
-    )
+    );
 }
-
