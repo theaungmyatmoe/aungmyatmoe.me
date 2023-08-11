@@ -23,7 +23,13 @@ export default function Newsletter() {
         resolver: zodResolver(schema)
     });
     const onSubmit = (data) => {
-        subscribeNewsletter(data.email);
+        subscribeNewsletter(data.email)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     };
 
     return (
