@@ -1,4 +1,5 @@
 import {Button} from "@/components/Button";
+import {MailIcon} from "@/components/icons";
 
 export default function Newsletter() {
     return (

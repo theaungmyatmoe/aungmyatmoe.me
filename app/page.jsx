@@ -5,72 +5,26 @@ import clsx from "clsx";
 import {Button} from "@/components/Button";
 import {Card} from "@/components/Card";
 import {Container} from "@/components/Container";
-import {
-    GitHubIcon,
-    LinkedInIcon,
-    TwitterIcon,
-} from "@/components/SocialIcons";
+import {GitHubIcon, LinkedInIcon, TwitterIcon,} from "@/components/SocialIcons";
+import {formatDate} from "@/lib/formatDate";
+import {getAllArticles} from "@/lib/api";
+import {generateRssFeed} from "@/lib/generateRssFeed";
+
 import image1 from "@/images/photos/image-1.jpg";
 import image2 from "@/images/photos/image-2.jpg";
 import image3 from "@/images/photos/image-3.jpg";
 import image4 from "@/images/photos/image-4.jpg";
 import image5 from "@/images/photos/image-5.jpg";
-import logoMcy from "@/images/logos/mcy.jpg";
-import logoWde from "@/images/logos/wde.jpg";
-import logoUpwork from "@/images/logos/upwork.png";
-import {formatDate} from "@/lib/formatDate";
-import {getAllArticles} from "@/lib/api";
-import {generateRssFeed} from "@/lib/generateRssFeed";
-import logoBinaryLab from "@/images/logos/binary_lab.png";
-import logoTheRecruiterMyanmar from "@/images/logos/the_recruiter_myanmar.png";
-import logoTechstars from "@/images/logos/techstars.png";
 
-function MailIcon(props) {
-    return (
-        <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-            <path
-                fillRule="evenodd"
-                d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
-            />
-        </svg>
-    );
-}
+import logoWde from "@/images/logos/companies/wde.jpg";
+import logoUpwork from "@/images/logos/companies/upwork.png";
+import logoMcy from "@/images/logos/companies/mcy.jpg";
+import logoTheRecruiterMyanmar from "@/images/logos/companies/the_recruiter_myanmar.png";
+import logoBinaryLab from "@/images/logos/companies/binary_lab.png";
+import logoTechstars from "@/images/logos/companies/techstars.png";
+import {MailIcon, BriefcaseIcon, ArrowDownIcon} from "@/components/icons";
+import Newsletter from "@/components/NewsLetter";
 
-function BriefcaseIcon(props) {
-    return (
-        <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-            {...props}
-        >
-            <path
-                d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-                className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-            />
-            <path
-                d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
-                className="stroke-zinc-400 dark:stroke-zinc-500"
-            />
-        </svg>
-    );
-}
-
-function ArrowDownIcon(props) {
-    return (
-        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-            <path
-                d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    );
-}
 
 function Article({article}) {
     return (
@@ -164,7 +118,7 @@ const Resume = () => {
                             className="relative mt-1 flex overflow-hidden object-contain h-12 w-12 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                             <Image
                                 src={role.logo}
-                                alt=""
+                                alt="Role Image"
                                 width={48}
                                 height={48}
                                 className="rounded-full"
@@ -300,7 +254,7 @@ export default async function Home() {
                         ))}
                     </div>
                     <div className="space-y-10 lg:pl-16 xl:pl-24">
-                        {/*<Newsletter/>*/}
+                        <Newsletter/>
                         <Resume/>
                     </div>
                 </div>
