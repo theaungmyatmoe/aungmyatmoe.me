@@ -1,12 +1,16 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
+import Image from 'next/image';
+import Link from 'next/link';
+import clsx from 'clsx';
 
-import {Container} from '@/components/Container'
-import {GitHubIcon, LinkedInIcon, TwitterIcon,} from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import { Container } from '@/components/Container';
+import {
+    GitHubIcon,
+    LinkedInIcon,
+    TwitterIcon
+} from '@/components/SocialIcons';
+import portraitImage from '@/images/portrait.jpg';
 
-function SocialLink({className, href, children, icon: Icon}) {
+function SocialLink({ className, href, children, icon: Icon }) {
     return (
         <li className={clsx(className, 'flex')}>
             <Link
@@ -14,11 +18,11 @@ function SocialLink({className, href, children, icon: Icon}) {
                 target="_blank"
                 className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
             >
-                <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500"/>
+                <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
                 <span className="ml-4">{children}</span>
             </Link>
         </li>
-    )
+    );
 }
 
 function MailIcon(props) {
@@ -29,8 +33,11 @@ function MailIcon(props) {
                 d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
             />
         </svg>
-    )
+    );
 }
+export const metadata = {
+    title: 'About'
+};
 
 export default function About() {
     return (
@@ -49,42 +56,60 @@ export default function About() {
                     </div>
                     <div className="lg:order-first lg:row-span-2">
                         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                            I’m Aung Myat Moe. I live in Letpadan, where I learn and develop for future.
+                            I’m Aung Myat Moe. I live in Letpadan, where I learn
+                            and develop for future.
                         </h1>
                         <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                             <p>
-                                Letpadan is a small town where I grew up and had a buck of childhood memories. After I
-                                got my hands wet with Javascript, I soon discovered my passion was programming while
-                                hacking on some VPNs with Bash back in 2018.
+                                Letpadan is a small town where I grew up and had
+                                a buck of childhood memories. After I got my
+                                hands wet with Javascript, I soon discovered my
+                                passion was programming while hacking on some
+                                VPNs with Bash back in 2018.
                             </p>
                             <p>
-                                I have about three years of experience as a web developer and love working with Laravel,
-                                Vue, React, Next, and other hip frameworks. I have experience in developing web
-                                services.
+                                I have about three years of experience as a web
+                                developer and love working with Laravel, Vue,
+                                React, Next, and other hip frameworks. I have
+                                experience in developing web services.
                             </p>
                             <p>
-                                I enjoy building elegant, interactive effect heavy javascript applications with an eye
-                                on animated content. In my spare time, I fancy playing football with my mates. Every
-                                once in a while, I tend to explore catching-edge technologies.
+                                I enjoy building elegant, interactive effect
+                                heavy javascript applications with an eye on
+                                animated content. In my spare time, I fancy
+                                playing football with my mates. Every once in a
+                                while, I tend to explore catching-edge
+                                technologies.
                             </p>
                             <p>
-                                Aside from work, I’ve worked on little projects over the years. Many of them are
-                                open-source. Hence, you can check out and contribute the code if you see any matters and
-                                ideas about how it should be enhanced and maintained.
+                                Aside from work, I’ve worked on little projects
+                                over the years. Many of them are open-source.
+                                Hence, you can check out and contribute the code
+                                if you see any matters and ideas about how it
+                                should be enhanced and maintained.
                             </p>
-
                         </div>
                     </div>
                     <div className="lg:pl-20">
                         <ul role="list">
-                            <SocialLink href="https://twitter.com/_amm834   " icon={TwitterIcon}>
+                            <SocialLink
+                                href="https://twitter.com/_amm834   "
+                                icon={TwitterIcon}
+                            >
                                 Follow on Twitter
                             </SocialLink>
-                            <SocialLink href="https://github.com/amm834" icon={GitHubIcon} className="mt-4">
+                            <SocialLink
+                                href="https://github.com/amm834"
+                                icon={GitHubIcon}
+                                className="mt-4"
+                            >
                                 Follow on GitHub
                             </SocialLink>
-                            <SocialLink href="https://linkedin.com/in/aungmyatmoe" icon={LinkedInIcon}
-                                        className="mt-4">
+                            <SocialLink
+                                href="https://linkedin.com/in/aungmyatmoe"
+                                icon={LinkedInIcon}
+                                className="mt-4"
+                            >
                                 Follow on LinkedIn
                             </SocialLink>
                             <SocialLink
@@ -99,5 +124,5 @@ export default function About() {
                 </div>
             </Container>
         </>
-    )
+    );
 }

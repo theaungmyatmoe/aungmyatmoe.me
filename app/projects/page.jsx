@@ -1,21 +1,28 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import {Card} from '@/components/Card'
-import {SimpleLayout} from '@/components/SimpleLayout'
-import logoWuttyi from '@/images/logos/wuttyi.svg'
-import logoYoursNvim from '@/images/logos/logoYoursNvim.png'
-import logoAungMyatMoe from '@/images/avatar.jpg'
-import logoRina from '@/images/logos/logoRina.jpg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoMeow from '@/images/logos/meow-min.png'
+import { Card } from '@/components/Card';
+import { SimpleLayout } from '@/components/SimpleLayout';
+import logoWuttyi from '@/images/logos/wuttyi.svg';
+import logoYoursNvim from '@/images/logos/logoYoursNvim.png';
+import logoAungMyatMoe from '@/images/avatar.jpg';
+import logoRina from '@/images/logos/logoRina.jpg';
+import logoPlanetaria from '@/images/logos/planetaria.svg';
+import logoMeow from '@/images/logos/meow-min.png';
 
+export const metadata = {
+    title: 'Projects'
+};
 
 const projects = [
     {
         name: 'My Intuitive Portfolio',
-        description: 'This is my portfolio and blog which was crafted to share my projects and knowledge and resume.',
-        link: {href: 'https://github.com/amm834/aungmyatmoe.me', label: 'https://github.com/amm834/aungmyatmoe.me'},
-        logo: logoAungMyatMoe,
+        description:
+            'This is my portfolio and blog which was crafted to share my projects and knowledge and resume.',
+        link: {
+            href: 'https://github.com/amm834/aungmyatmoe.me',
+            label: 'https://github.com/amm834/aungmyatmoe.me'
+        },
+        logo: logoAungMyatMoe
     },
     {
         name: 'Wuttyi Lang',
@@ -25,7 +32,7 @@ const projects = [
             href: 'https://wuttyi.vercel.app/',
             label: 'https://wuttyi.vercel.app/'
         },
-        logo: logoWuttyi,
+        logo: logoWuttyi
     },
     {
         name: 'Yours.Nvim',
@@ -35,7 +42,7 @@ const projects = [
             href: 'https://github.com/amm834/yours.nvim',
             label: 'https://github.com/amm834/yours.nvim'
         },
-        logo: logoYoursNvim,
+        logo: logoYoursNvim
     },
     {
         name: 'Rina PHP Framework',
@@ -45,7 +52,7 @@ const projects = [
             href: 'https://github.com/amm834/rina-php-mvc-framework',
             label: 'https://github.com/amm834/rina-php-mvc-framework'
         },
-        logo: logoRina,
+        logo: logoRina
     },
     {
         name: 'Painify Credit Card Validator',
@@ -55,7 +62,7 @@ const projects = [
             href: 'https://github.com/amm834/cc',
             label: 'https://github.com/amm834/cc'
         },
-        logo: logoPlanetaria,
+        logo: logoPlanetaria
     },
     {
         name: 'Omini Food',
@@ -65,7 +72,7 @@ const projects = [
             href: 'https://ominifood.vercel.app/',
             label: 'https://ominifood.vercel.app/'
         },
-        logo: logoPlanetaria,
+        logo: logoPlanetaria
     },
     {
         name: 'Natour',
@@ -75,7 +82,7 @@ const projects = [
             href: 'https://natour-solo.vercel.app/',
             label: 'https://natour-solo.vercel.app/'
         },
-        logo: logoPlanetaria,
+        logo: logoPlanetaria
     },
     {
         name: 'Meow',
@@ -85,10 +92,9 @@ const projects = [
             href: 'https://github.com/amm834/meow',
             label: 'https://github.com/amm834/meow'
         },
-        logo: logoMeow,
-    },
-
-]
+        logo: logoMeow
+    }
+];
 
 function LinkIcon(props) {
     return (
@@ -98,7 +104,7 @@ function LinkIcon(props) {
                 fill="currentColor"
             />
         </svg>
-    )
+    );
 }
 
 export default function Projects() {
@@ -114,8 +120,7 @@ export default function Projects() {
                 >
                     {projects.map((project) => (
                         <Card as="li" key={project.name}>
-                            <div
-                                className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                                 <Image
                                     src={project.logo}
                                     alt={project.name}
@@ -127,17 +132,23 @@ export default function Projects() {
                                 />
                             </div>
                             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                                <Card.Link href={project.link.href}>
+                                    {project.name}
+                                </Card.Link>
                             </h2>
-                            <Card.Description>{project.description}</Card.Description>
+                            <Card.Description>
+                                {project.description}
+                            </Card.Description>
                             <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-                                <LinkIcon className="h-6 w-6 flex-none"/>
-                                <span className="ml-2">{project.link.label}</span>
+                                <LinkIcon className="h-6 w-6 flex-none" />
+                                <span className="ml-2">
+                                    {project.link.label}
+                                </span>
                             </p>
                         </Card>
                     ))}
                 </ul>
             </SimpleLayout>
         </>
-    )
+    );
 }

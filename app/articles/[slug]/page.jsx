@@ -6,6 +6,20 @@ import renderMarkdownToHTML from '@/lib/renderMarkdownToHTML';
 
 const components = {};
 
+export async function generateMetadata({ params, searchParams }, parent) {
+    const slug = params.slug;
+
+    const { meta } = await getArticleBySlug(slug);
+
+    // optionally access and extend (rather than replace) parent metadata
+    const previousImages = (await parent).openGraph?.images || [];
+
+    return {
+        title: meta.title,
+        description: meta.description
+    };
+}
+
 export default async function ArticlePageBySlug({ params: { slug } }) {
     const { meta, content } = await getArticleBySlug(slug);
     const mdxSource = await renderMarkdownToHTML(content);

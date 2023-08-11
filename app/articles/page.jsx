@@ -3,6 +3,10 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 import { formatDate } from '@/lib/formatDate';
 import { getAllArticles } from '@/lib/api';
 
+export const metadata = {
+    title: 'Articles'
+};
+
 function Article({ article }) {
     return (
         <article className="md:grid md:grid-cols-4 md:items-baseline">
