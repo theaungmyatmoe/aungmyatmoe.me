@@ -29,6 +29,8 @@ import logoMcy from '@/images/logos/companies/mcy.jpg';
 import logoTheRecruiterMyanmar from '@/images/logos/companies/the_recruiter_myanmar.png';
 import logoBinaryLab from '@/images/logos/companies/binary_lab.png';
 import logoTechstars from '@/images/logos/companies/techstars.png';
+import logoGlobalInnovationConsulting from '@/images/logos/companies/gic.png';
+
 import Newsletter from '@/components/NewsLetter';
 
 function Article({ article }) {
@@ -57,14 +59,21 @@ function SocialLink({ icon: Icon, ...props }) {
 const Resume = () => {
     let resume = [
         {
-            company: 'Techstars',
-            title: 'Technical Lead',
-            logo: logoTechstars,
-            start: '2023 Feb',
+            company: 'GIC',
+            title: 'Senior Software Engineer',
+            logo: logoGlobalInnovationConsulting,
+            start: '2023 Aug',
             end: {
                 label: 'Present',
                 dateTime: new Date().getFullYear()
             }
+        },
+        {
+            company: 'Techstars',
+            title: 'Technical Lead',
+            logo: logoTechstars,
+            start: '2023 Feb',
+            end: '2023 Jul'
         },
         {
             company: 'Binary Lab',
