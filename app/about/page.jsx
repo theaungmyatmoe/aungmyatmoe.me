@@ -36,7 +36,8 @@ function MailIcon(props) {
     );
 }
 export const metadata = {
-    title: 'About'
+    title: 'About',
+    description: 'About Aung Myat Moe'
 };
 
 export default function About() {

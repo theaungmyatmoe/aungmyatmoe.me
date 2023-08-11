@@ -3,7 +3,8 @@ import { Section } from '@/components/Section';
 import { SimpleLayout } from '@/components/SimpleLayout';
 
 export const metadata = {
-    title: 'Uses'
+    title: 'Uses',
+    description: 'Software I use, I love, and other things I recommend.'
 };
 
 function ToolsSection({ children, ...props }) {

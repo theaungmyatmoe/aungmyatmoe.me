@@ -10,7 +10,8 @@ import logoPlanetaria from '@/images/logos/planetaria.svg';
 import logoMeow from '@/images/logos/meow-min.png';
 
 export const metadata = {
-    title: 'Projects'
+    title: 'Projects',
+    description: 'Talk is cheap, here is the list of my open source projects'
 };
 
 const projects = [

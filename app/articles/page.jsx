@@ -4,7 +4,9 @@ import { formatDate } from '@/lib/formatDate';
 import { getAllArticles } from '@/lib/api';
 
 export const metadata = {
-    title: 'Articles'
+    title: 'Articles',
+    description:
+        'All of my long-form thoughts on programming, design patterns, and more, collected in chronological order.'
 };
 
 function Article({ article }) {
