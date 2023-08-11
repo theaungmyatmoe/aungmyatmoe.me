@@ -2,12 +2,13 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request) {
     try {
-        await fetch(
+        const { email } = await request.json();
+        const res = await fetch(
             `${process.env.CONVERTKIT_API_URL}/forms/${process.env.CONVERTKIT_FORM_ID}/subscribe`,
             {
                 body: JSON.stringify({
                     api_key: process.env.CONVERTKIT_API_KEY,
-                    email: request.body.get('email')
+                    email
                 })
             }
         );
