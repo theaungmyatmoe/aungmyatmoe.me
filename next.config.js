@@ -1,21 +1,22 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
     reactStrictMode: true,
+    swcMinify: true,
     experimental: {
-        appDir: true,
+        appDir: true
     },
     async redirects() {
         return [
             {
                 source: '/home',
                 destination: '/',
-                permanent: true,
+                permanent: true
             },
             {
                 source: '/admin',
                 destination: '/admin/index.html',
-                permanent: true,
+                permanent: true
             }
-        ]
+        ];
     }
-}
+};
