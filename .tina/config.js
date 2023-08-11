@@ -1,7 +1,7 @@
-import {defineConfig} from 'tinacms'
+import { defineConfig } from 'tinacms';
 
 // Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
+const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main';
 
 export default defineConfig({
     branch,
@@ -9,13 +9,21 @@ export default defineConfig({
     token: process.env.TINA_TOKEN,
     build: {
         publicFolder: 'public',
-        outputFolder: 'admin',
+        outputFolder: 'admin'
     },
     media: {
         tina: {
             mediaRoot: 'uploads',
-            publicFolder: 'public',
+            publicFolder: 'public'
+        }
+    },
+    search: {
+        tina: {
+            indexerToken: process.env.TINA_SEARCH_TOKEN,
+            stopwordLanguages: ['eng']
         },
+        indexBatchSize: 100,
+        maxSearchIndexFieldLength: 100
     },
     schema: {
         collections: [
@@ -26,14 +34,13 @@ export default defineConfig({
                 format: 'mdx',
                 ui: {
                     filename: {
-                        slugify: values => {
-                            return `${
-                                values?.title?.toLowerCase()
-                                    .trim()
-                                    .replace(/[^\w\s-]/g, "")
-                                    .replace(/[\s_-]+/g, "-")
-                                    .replace(/^-+|-+$/g, "")
-                            }`
+                        slugify: (values) => {
+                            return `${values?.title
+                                ?.toLowerCase()
+                                .trim()
+                                .replace(/[^\w\s-]/g, '')
+                                .replace(/[\s_-]+/g, '-')
+                                .replace(/^-+|-+$/g, '')}`;
                         }
                     }
                 },
@@ -43,7 +50,7 @@ export default defineConfig({
                         name: 'title',
                         label: 'Title',
                         isTitle: true,
-                        required: true,
+                        required: true
                     },
                     {
                         type: 'string',
@@ -67,10 +74,10 @@ export default defineConfig({
                         type: 'rich-text',
                         name: 'body',
                         label: 'Body',
-                        isBody: true,
-                    },
-                ],
-            },
-        ],
-    },
-})
+                        isBody: true
+                    }
+                ]
+            }
+        ]
+    }
+});
