@@ -4,7 +4,6 @@ import { MailIcon } from '@/components/icons';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { subscribeNewsletter } from '@/actions/subscribe-newsletter';
 
 const schema = z.object({
     email: z
@@ -21,15 +20,7 @@ export default function Newsletter() {
     } = useForm({
         resolver: zodResolver(schema)
     });
-    const onSubmit = (data) => {
-        // subscribeNewsletter(data.email)
-        //     .then((res) => {
-        //         console.log(res);
-        //     })
-        //     .catch((err) => {
-        //         console.log(err);
-        //     });
-    };
+    const onSubmit = (data) => {};
 
     return (
         <form
