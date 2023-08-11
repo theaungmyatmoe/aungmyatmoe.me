@@ -1,9 +1,8 @@
 'use client';
 import { Button } from '@/components/Button';
 import { MailIcon } from '@/components/icons';
-import { useState } from 'react';
 import { z } from 'zod';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { subscribeNewsletter } from '@/actions/subscribe-newsletter';
 
@@ -23,13 +22,13 @@ export default function Newsletter() {
         resolver: zodResolver(schema)
     });
     const onSubmit = (data) => {
-        subscribeNewsletter(data.email)
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        // subscribeNewsletter(data.email)
+        //     .then((res) => {
+        //         console.log(res);
+        //     })
+        //     .catch((err) => {
+        //         console.log(err);
+        //     });
     };
 
     return (
