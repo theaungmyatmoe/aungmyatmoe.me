@@ -59,7 +59,7 @@ function SocialLink({ icon: Icon, ...props }) {
 const Resume = () => {
     let resume = [
         {
-            company: 'GIC',
+            company: 'Global Innovation Consulting',
             title: 'Senior Software Engineer',
             logo: logoGlobalInnovationConsulting,
             start: '2023 Aug',
