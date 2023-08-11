@@ -16,13 +16,15 @@ import image3 from "@/images/photos/image-3.jpg";
 import image4 from "@/images/photos/image-4.jpg";
 import image5 from "@/images/photos/image-5.jpg";
 
+import {MailIcon, BriefcaseIcon, ArrowDownIcon} from "@/components/icons";
+
+
 import logoWde from "@/images/logos/companies/wde.jpg";
 import logoUpwork from "@/images/logos/companies/upwork.png";
 import logoMcy from "@/images/logos/companies/mcy.jpg";
 import logoTheRecruiterMyanmar from "@/images/logos/companies/the_recruiter_myanmar.png";
 import logoBinaryLab from "@/images/logos/companies/binary_lab.png";
 import logoTechstars from "@/images/logos/companies/techstars.png";
-import {MailIcon, BriefcaseIcon, ArrowDownIcon} from "@/components/icons";
 import Newsletter from "@/components/NewsLetter";
 
 
@@ -245,7 +247,7 @@ export default async function Home() {
                     </div>
                 </div>
             </Container>
-            {/*<Photos/>*/}
+            <Photos/>
             <Container className="mt-20 md:mt-20">
                 <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
                     <div className="flex flex-col gap-16">
