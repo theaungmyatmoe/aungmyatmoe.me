@@ -1,10 +1,12 @@
 'use client';
+
 import { Button } from '@/components/Button';
 import { MailIcon } from '@/components/icons';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { subscribeNewsletter } from '@/actions/subscribe-newsletter';
+import { useTransition } from 'react';
 
 const schema = z.object({
     email: z
@@ -13,6 +15,7 @@ const schema = z.object({
         .email("Email doesn't look right")
 });
 export default function Newsletter() {
+    const [isPending, startTransition] = useTransition();
     const {
         register,
         getValues,
@@ -22,13 +25,10 @@ export default function Newsletter() {
         resolver: zodResolver(schema)
     });
     const onSubmit = (data) => {
-        // subscribeNewsletter(data.email)
-        //     .then((res) => {
-        //         console.log(res);
-        //     })
-        //     .catch((err) => {
-        //         console.log(err);
-        //     });
+        startTransition(() => {
+            console.log(data);
+            subscribeNewsletter(data.email).then((r) => console.log(r));
+        });
     };
 
     return (

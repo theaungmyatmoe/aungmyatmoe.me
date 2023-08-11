@@ -5,6 +5,7 @@ export async function subscribeNewsletter(email) {
         await fetch(
             `${process.env.CONVERTKIT_API_URL}/forms/${process.env.CONVERTKIT_FORM_ID}/subscribe`,
             {
+                method: 'POST',
                 body: JSON.stringify({
                     api_key: process.env.CONVERTKIT_API_KEY,
                     email
