@@ -25,15 +25,13 @@ export default function Newsletter() {
     const router = useRouter();
     const onSubmit = async ({ email }) => {
         try {
-            await fetch('/api/newsletter', {
-                method: 'POST',
-                body: JSON.stringify({ email }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+            await axios.post('/api/newsletter', {
+                email
             });
             router.push('/thank-you');
-        } catch (error) {}
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (

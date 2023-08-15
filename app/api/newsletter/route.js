@@ -1,15 +1,14 @@
 import { NextResponse } from 'next/server';
+import axios from 'axios';
 
 export async function POST(request) {
     try {
         const { email } = await request.json();
-        const res = await fetch(
+        const res = await axios.post(
             `${process.env.CONVERTKIT_API_URL}/forms/${process.env.CONVERTKIT_FORM_ID}/subscribe`,
             {
-                body: JSON.stringify({
-                    api_key: process.env.CONVERTKIT_API_KEY,
-                    email
-                })
+                api_key: process.env.CONVERTKIT_API_KEY,
+                email
             }
         );
         return NextResponse.json({ status: 'subscribed' });
