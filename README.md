@@ -51,8 +51,8 @@ pnpm install
 pnpm dev
 ```
 
-**Entering Admin Mode**
-Go to your served domain and then append `/admin`. It'll open up the admin panel.
+## Admin Dashboard
+Admin dashboard is serving at `/admin`.
 
 ## Production
 
