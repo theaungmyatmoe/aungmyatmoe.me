@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import {Container} from '@/components/Container'
+import { Container } from '@/components/Container';
 
-function NavLink({href, children}) {
+function NavLink({ href, children }) {
     return (
         <Link
             href={href}
@@ -10,7 +10,7 @@ function NavLink({href, children}) {
         >
             {children}
         </Link>
-    )
+    );
 }
 
 export function Footer() {
@@ -24,16 +24,17 @@ export function Footer() {
                                 <NavLink href="/about">About</NavLink>
                                 <NavLink href="/articles">Articles</NavLink>
                                 <NavLink href="/projects">Projects</NavLink>
+                                <NavLink href="/talks">Talks</NavLink>
                                 <NavLink href="/uses">Uses</NavLink>
                             </div>
                             <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                                &copy; {new Date().getFullYear()} Aung Myat Moe. All rights
-                                reserved.
+                                &copy; {new Date().getFullYear()} Aung Myat Moe.
+                                All rights reserved.
                             </p>
                         </div>
                     </Container.Inner>
                 </div>
             </Container.Outer>
         </footer>
-    )
+    );
 }
