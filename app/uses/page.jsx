@@ -37,13 +37,13 @@ export default function Uses() {
             >
                 <div className="space-y-20">
                     <ToolsSection title="Workstation">
-                        <Tool title="14” Acer E14 Laptop">
-                            I'm currently using an Intel-based 14” Acer Low End
-                            Notebook, Rapoo wireless mouse which is my favorite
-                            brand and integrated keyboard which comes with Acer.
+                        <Tool title="13.3” Mac Book Pro">
+                            I'm currently using an Mac Book Pro. I'm a huge fan
+                            of Apple products. I love the way they design their
+                            products and how they work.
                         </Tool>
                     </ToolsSection>
-                    <ToolsSection title="Development tools">
+                    <ToolsSection title="Software Development">
                         <Tool title="Jetbrains IDEs">
                             I'm a huge fan of Jetbrains products. They give me
                             an opportunity not to memorize language syntax and
@@ -65,6 +65,20 @@ export default function Uses() {
                         <Tool title="Notion">
                             Notion is my note taking app of choice and will
                             probably continue to be so for a long time.
+                        </Tool>
+                    </ToolsSection>
+                    <ToolsSection title="Project Management">
+                        <Tool title="Jira">
+                            I love the way Jira works. It's a great tool for
+                            project management and issue tracking.
+                        </Tool>
+                    </ToolsSection>
+                    <ToolsSection title="Health Management">
+                        <Tool title="Google Fit">
+                            It enforce me to walk at least 5,000 steps a day. As
+                            a developer, I spend most of my time sitting in
+                            front of my computer. So, it's a great tool to keep
+                            me healthy.
                         </Tool>
                     </ToolsSection>
                 </div>
