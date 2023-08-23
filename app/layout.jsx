@@ -28,7 +28,7 @@ export default async function RootLayout({ children }) {
                     <Footer />
                     <AnalyticsWrapper />
 
-                    <!-- Google tag (gtag.js) -->
+                
                     <Script src="https://www.googletagmanager.com/gtag/js?id=G-6ZW1JW318K" />
                     <Script id="google-analytics">
                         {`
