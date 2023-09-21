@@ -33,6 +33,7 @@ import logoGlobalInnovationConsulting from '@/images/logos/companies/gic.png';
 
 import Newsletter from '@/components/NewsLetter';
 import { CalendarIcon } from '@heroicons/react/24/outline';
+import Avatar from 'boring-avatars';
 
 function Article({ article }) {
     return (
@@ -90,11 +91,25 @@ const Resume = () => {
             }
         },
         {
+            company: 'Global Innovation Consulting',
+            title: 'Project Lead / Senior Software Engineer',
+            logo: logoGlobalInnovationConsulting,
+            start: '2023 July',
+            end: '2023 Aug'
+        },
+        {
             company: 'Techstars',
             title: 'Technical Lead',
             logo: logoTechstars,
             start: '2023 Feb',
             end: '2023 Jul'
+        },
+        {
+            company: 'Alpha Learn',
+            title: 'Chief Technology Officer',
+            logo: 'https://source.boringavatars.com/marble/120/Maria%20Mitchell?colors=264653,2a9d8f,e9c46a,f4a261,e76f51',
+            start: '2023 Feb',
+            end: '2023 May'
         },
         {
             company: 'Binary Lab',
@@ -118,7 +133,6 @@ const Resume = () => {
             end: '2023 Feb'
         }
     ];
-
     return (
         <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">

@@ -13,6 +13,7 @@
     "@tinacms/cli": "^1.5.27",
     "@vercel/analytics": "^0.1.8",
     "axios": "^1.4.0",
+    "boring-avatars": "^1.10.1",
     "clsx": "^1.2.1",
     "cssnano": "^6.0.1",
     "eslint-config-next": "^13.4.13",
