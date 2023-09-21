@@ -32,6 +32,7 @@ import logoTechstars from '@/images/logos/companies/techstars.png';
 import logoGlobalInnovationConsulting from '@/images/logos/companies/gic.png';
 
 import Newsletter from '@/components/NewsLetter';
+import { CalendarIcon } from '@heroicons/react/24/outline';
 
 function Article({ article }) {
     return (
@@ -59,8 +60,28 @@ function SocialLink({ icon: Icon, ...props }) {
 const Resume = () => {
     let resume = [
         {
+            company: 'Myanmar Cyber Youths',
+            title: 'Founder',
+            logo: logoMcy,
+            start: '2021',
+            end: {
+                label: 'Present',
+                dateTime: new Date().getFullYear()
+            }
+        },
+        {
+            company: 'Web Developer Environment',
+            title: 'Founder',
+            logo: logoWde,
+            start: '2019',
+            end: {
+                label: 'Present',
+                dateTime: new Date().getFullYear()
+            }
+        },
+        {
             company: 'Global Innovation Consulting',
-            title: 'Senior Software Engineer',
+            title: 'Technical Lead / Architect',
             logo: logoGlobalInnovationConsulting,
             start: '2023 Aug',
             end: {
@@ -88,26 +109,6 @@ const Resume = () => {
             logo: logoTheRecruiterMyanmar,
             start: '2021 Feb',
             end: '2021 Apr'
-        },
-        {
-            company: 'Web Developer Environment',
-            title: 'Founder',
-            logo: logoWde,
-            start: '2019',
-            end: {
-                label: 'Present',
-                dateTime: new Date().getFullYear()
-            }
-        },
-        {
-            company: 'Myanmar Cyber Youths',
-            title: 'Founder',
-            logo: logoMcy,
-            start: '2021',
-            end: {
-                label: 'Present',
-                dateTime: new Date().getFullYear()
-            }
         },
         {
             company: 'Upwork',
@@ -260,7 +261,7 @@ export default async function Home() {
                     </div>
                 </div>
             </Container>
-            <Photos />
+            {/*<Photos />*/}
             <Container className="mt-20 md:mt-20">
                 <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
                     <div className="flex flex-col gap-16">

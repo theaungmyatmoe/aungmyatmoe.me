@@ -42,7 +42,6 @@ export default function Speaking() {
                         title="Leveling Up: Navigating the Junior to Senior Software Engineering Journey"
                         description="Discover how to evolve from a junior to senior software engineer with expert insights. Learn technical mastery, leadership skills, and effective communication strategies. Overcome challenges, embrace growth, and craft your path to success in the software development world."
                         event="Lara Camp 2023"
-                        cta="Register Now"
                     />
                     {/*<Appearance*/}
                     {/*    href="#"*/}
