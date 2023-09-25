@@ -1,0 +1,42 @@
+---
+title: Sync Microservices System Design in Nustshell
+description: >-
+  When I first learned about the system we had to implement, it appeared
+  deceptively simple and concise. However, the reality was far from
+  straightforward. The organization's diverse branches had their databases, and
+  this forced us to reconsider how we would approach the design and development
+  of the system.
+excerpt: >-
+  When I first learned about the system we had to implement, it appeared
+  deceptively simple and concise. However, the reality was far from
+  straightforward. The organization's diverse branches had their databases, and
+  this forced us to reconsider how we would approach the design and development
+  of the system.
+date: 2023-09-24T17:30:00.000Z
+---
+
+![](/uploads/doesnotsimply.jpg)
+
+When I first learned about the system we had to implement, it appeared deceptively simple and concise. However, the reality was far from straightforward. The organization's diverse branches had their databases, and this forced us to reconsider how we would approach the design and development of the system.
+
+The challenge of integrating a legacy system with a modern one became evident, especially as we aimed to incorporate multi-tenancy. While multi-tenancy is suitable for databases sharing the same schema and location, our situation required a different approach. Consider a scenario where we execute a write command on database B - in the event of a bug, we need robust logging and monitoring. To address this concern, we decided to segment our services.
+
+These services are internally composed and exposed via an API gateway, offering a clear separation of internal implementation details from other developers. This approach allows us to foster collaboration with junior team members while still maintaining control over the system's architecture.
+
+To ensure the success of our system, we've applied various design patterns and techniques:
+
+1. **Circuit Breaker**: Given the network's inherent unreliability, we've implemented circuit breakers to gracefully handle failures and disruptions.
+2. **API Gateway**: We've established an API gateway to streamline and manage external communication with our services.
+3. **Database per Service**: Each service has its dedicated database, ensuring data isolation and scalability.
+4. **Schema per Service**: We've adopted a schema-per-service approach, allowing each service to manage its data structure independently.
+5. **API Composition**: Our system leverages API composition to assemble complex functionalities from multiple services.
+6. **Sync Communication**: Synchronous communication is utilized when needed, ensuring data consistency and reliability.
+7. **Service per Team**: We've organized teams around specific services to enhance ownership and accountability.
+8. **Remote Procedure Invocation (RPI)**: RPI enables seamless communication between services, enhancing system cohesion.
+9. **Self-Registration**: Services self-register to simplify dynamic service discovery and orchestration.
+10. **Routing**: We've implemented routing mechanisms to efficiently direct requests to the appropriate services.
+11. **Service Discovery**: Dynamic service discovery ensures that services can locate and communicate with each other.
+12. **Observability**: To monitor system health and performance, we've integrated observability tools and practices.
+13. **Handling Failures and Latency**: Our system has robust strategies in place to deal with failures and mitigate latency issues.
+
+These design patterns and techniques collectively empower our system to navigate the complex landscape of multi-tenancy, network unpredictability, and evolving requirements while maintaining flexibility, reliability, and manageability."
