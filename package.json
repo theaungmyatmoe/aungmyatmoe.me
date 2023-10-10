@@ -32,7 +32,7 @@
     "remark-rehype": "^10.1.0",
     "sharp": "^0.32.4",
     "tinacms": "^1.5.18",
-    "zod": "^3.21.4"
+    "zod": "^3.22.3"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
