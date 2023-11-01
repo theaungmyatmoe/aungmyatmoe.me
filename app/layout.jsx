@@ -6,6 +6,7 @@ import Script from 'next/script';
 
 export const metadata = {
     title: 'Aung Myat Moe - Software Engineer, Founder and Open Source Enthusiast',
+
     description:
         'I’m Aung Myat Moe, a software engineer and founder based in Letpadan. I’m the founder of Myanmar Cyber Youths and Web Dev Environment, where we develop technologies that empower regular people to explore space on their own terms.q'
 };
@@ -28,7 +29,6 @@ export default async function RootLayout({ children }) {
                     <Footer />
                     <AnalyticsWrapper />
 
-                
                     <Script src="https://www.googletagmanager.com/gtag/js?id=G-6ZW1JW318K" />
                     <Script id="google-analytics">
                         {`

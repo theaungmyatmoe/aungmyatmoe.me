@@ -35,9 +35,10 @@ function MailIcon(props) {
         </svg>
     );
 }
+
 export const metadata = {
     title: 'About',
-    description: 'About Aung Myat Moe'
+    description: 'About - Aung Myat Moe'
 };
 
 export default function About() {
@@ -69,7 +70,7 @@ export default function About() {
                                 VPNs with Bash back in 2018.
                             </p>
                             <p>
-                                I have about three years of experience as a web
+                                I have over 4.6 years of experience as a web
                                 developer and love working with Laravel, Vue,
                                 React, Next, and other hip frameworks. I have
                                 experience in developing web services.

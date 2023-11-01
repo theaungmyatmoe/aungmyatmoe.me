@@ -62,7 +62,7 @@ const Resume = () => {
     let resume = [
         {
             company: 'Myanmar Cyber Youths',
-            title: 'Founder',
+            title: 'Founder / Director',
             logo: logoMcy,
             start: '2021',
             end: {
@@ -244,11 +244,11 @@ export default async function Home() {
                         Software Engineer, Founder and Open Source Enthusiast
                     </h1>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        I’m Aung Myat Moe, a software engineer and founder based
-                        in Letpadan. I’m the founder of Myanmar Cyber Youths and
-                        Web Dev Environment, where we develop technologies that
-                        empower regular people to explore space on their own
-                        terms.
+                        I’m Aung Myat Moe, a technical lead, a software engineer
+                        and Founder based in Letpadan. I’m the director of
+                        Myanmar Cyber Youths (MCY) and founder Web Dev
+                        Environment, where we develop technologies that empower
+                        regular people to explore space on their own terms.
                     </p>
                     {/* Social icons */}
                     <div className="mt-6 flex gap-6">
@@ -256,11 +256,6 @@ export default async function Home() {
                             href="https://twitter.com/_amm834"
                             aria-label="Follow on Twitter"
                             icon={TwitterIcon}
-                        />
-                        <SocialLink
-                            href="https://www.instagram.com/_aungmyatmoe/"
-                            aria-label="Follow on LinkedIn"
-                            icon={InstagramIcon}
                         />
                         <SocialLink
                             href="https://github.com/amm834"

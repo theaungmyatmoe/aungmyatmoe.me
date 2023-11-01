@@ -16,12 +16,22 @@ export const metadata = {
 
 const projects = [
     {
+        name: 'mCal',
+        description:
+            'mCal is a feature-rich calendar app that seamlessly combines the functionality of Gregorian and Myanmar calendars, ',
+        link: {
+            href: 'https://myanmar-calendar.vercel.app',
+            label: 'https://myanmar-calendar.vercel.app'
+        },
+        logo: logoMeow
+    },
+    {
         name: 'My Intuitive Portfolio',
         description:
             'This is my portfolio and blog which was crafted to share my projects and knowledge and resume.',
         link: {
             href: 'https://github.com/amm834/aungmyatmoe.me',
-            label: 'https://github.com/amm834/aungmyatmoe.me'
+            label: 'https://aungmyatmoe.me'
         },
         logo: logoAungMyatMoe
     },
