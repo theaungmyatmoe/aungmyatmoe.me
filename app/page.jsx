@@ -258,11 +258,6 @@ export default async function Home() {
                             icon={TwitterIcon}
                         />
                         <SocialLink
-                            href="https://www.instagram.com/_aungmyatmoe/"
-                            aria-label="Follow on LinkedIn"
-                            icon={InstagramIcon}
-                        />
-                        <SocialLink
                             href="https://github.com/amm834"
                             aria-label="Follow on GitHub"
                             icon={GitHubIcon}
