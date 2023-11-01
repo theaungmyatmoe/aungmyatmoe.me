@@ -35,6 +35,7 @@ function MailIcon(props) {
         </svg>
     );
 }
+
 export const metadata = {
     title: 'About',
     description: 'About - Aung Myat Moe'
