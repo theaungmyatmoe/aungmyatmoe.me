@@ -13,7 +13,7 @@
         "@hookform/resolvers": "^3.3.2",
         "@mapbox/rehype-prism": "^0.8.0",
         "@tinacms/cli": "^1.5.31",
-        "@vercel/analytics": "^0.1.8",
+        "@vercel/analytics": "^1.1.1",
         "axios": "^1.4.0",
         "boring-avatars": "^1.10.1",
         "clsx": "^1.2.1",
