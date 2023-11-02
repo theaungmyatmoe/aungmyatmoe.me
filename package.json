@@ -16,7 +16,7 @@
         "@vercel/analytics": "^0.1.8",
         "axios": "^1.4.0",
         "boring-avatars": "^1.10.1",
-        "clsx": "^1.2.1",
+        "clsx": "^2.0.0",
         "cssnano": "^6.0.1",
         "fast-glob": "^3.2.12",
         "feed": "^4.2.2",
