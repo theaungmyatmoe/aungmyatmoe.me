@@ -18,7 +18,7 @@
         "boring-avatars": "^1.10.1",
         "clsx": "^1.2.1",
         "cssnano": "^6.0.1",
-        "fast-glob": "^3.2.12",
+        "fast-glob": "^3.3.1",
         "feed": "^4.2.2",
         "focus-visible": "^5.2.0",
         "gray-matter": "^4.0.3",
