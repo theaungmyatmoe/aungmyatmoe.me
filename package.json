@@ -27,7 +27,7 @@
         "postcss-focus-visible": "^7.1.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "react-hook-form": "^7.45.4",
+        "react-hook-form": "^7.49.3",
         "rehype-stringify": "^10.0.0",
         "remark-gfm": "^3.0.1",
         "remark-rehype": "^10.1.0",
