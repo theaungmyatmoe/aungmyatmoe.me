@@ -24,7 +24,7 @@
         "gray-matter": "^4.0.3",
         "next": "^14.0.1",
         "next-mdx-remote": "^4.3.0",
-        "postcss-focus-visible": "^7.1.0",
+        "postcss-focus-visible": "^9.0.1",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-hook-form": "^7.49.3",
