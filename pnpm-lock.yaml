@@ -65,8 +65,8 @@ dependencies:
     specifier: ^4.3.0
     version: 4.3.0(react-dom@18.2.0)(react@18.2.0)
   postcss-focus-visible:
-    specifier: ^7.1.0
-    version: 7.1.0(postcss@8.4.31)
+    specifier: ^9.0.1
+    version: 9.0.1(postcss@8.4.31)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -13439,14 +13439,14 @@ packages:
       postcss: 8.4.31
     dev: false
 
-  /postcss-focus-visible@7.1.0(postcss@8.4.31):
-    resolution: {integrity: sha512-OGxO+eCXVkF94us4uOVLHDPaoJuV8HQhaqmVPo2DtECdjqzWNkmwhFRSRRDT5Sg04JQsAECzgIhpyX0JRTgwlQ==}
-    engines: {node: ^12 || ^14 || >=16}
+  /postcss-focus-visible@9.0.1(postcss@8.4.31):
+    resolution: {integrity: sha512-N2VQ5uPz3Z9ZcqI5tmeholn4d+1H14fKXszpjogZIrFbhaq0zNAtq8sAnw6VLiqGbL8YBzsnu7K9bBkTqaRimQ==}
+    engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
-      postcss: ^8.2
+      postcss: ^8.4
     dependencies:
       postcss: 8.4.31
-      postcss-selector-parser: 6.0.11
+      postcss-selector-parser: 6.0.13
     dev: false
 
   /postcss-import@15.1.0(postcss@8.4.31):
@@ -13690,14 +13690,6 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-
-  /postcss-selector-parser@6.0.11:
-    resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
-    engines: {node: '>=4'}
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
-    dev: false
 
   /postcss-selector-parser@6.0.13:
     resolution: {integrity: sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==}
